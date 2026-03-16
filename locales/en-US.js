@@ -1286,6 +1286,11 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       "add_node": "Add Node",
       "edit_node": "Edit Node",
       "new_node": "New Node",
+      "type": {
+        "placeholder": "Select Protocol Type",
+        "select_prompt": "Please select a protocol type first",
+        "select_error": "Please select a protocol type"
+      },
       "name": {
         "label": "Node Name",
         "placeholder": "Please enter node name",
@@ -1405,7 +1410,11 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
         "padding_scheme": {
           "description": "Each line represents a padding rule, format: stop=8, 0=30-30",
           "label": "Padding Scheme",
-          "placeholder": "Enter padding rules"
+          "placeholder": "Enter padding rules",
+          "use_default": "Use Default Scheme",
+          "edit_btn": "Edit Padding Scheme",
+          "configured": "{{count}} rules configured",
+          "not_configured": "Not configured"
         }
       },
       "shadowsocks": {

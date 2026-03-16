@@ -1256,6 +1256,11 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
       "add_node": "添加节点",
       "edit_node": "编辑节点",
       "new_node": "新建节点",
+      "type": {
+        "placeholder": "选择协议类型",
+        "select_prompt": "请先选择协议类型",
+        "select_error": "请先选择协议类型"
+      },
       "name": {
         "label": "节点名称",
         "placeholder": "请输入节点名称",
@@ -1384,7 +1389,9 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
           "placeholder": "选择填充方案",
           "edit_btn": "编辑填充方案",
           "configured": "已配置 {{count}} 条规则",
-          "not_configured": "未配置"
+          "not_configured": "未配置",
+          "description": "用于混淆流量特征的填充方案，每行一条规则，支持通配符 *",
+          "use_default": "使用默认方案"
         }
       },
       "shadowsocks": {
@@ -1747,7 +1754,7 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
         "dialog_title": "高级协议配置",
         "tls_tab": "TLS",
         "route_tab": "路由",
-        "multiplex_tab": "复用"
+        "multiplex_tab": "多路复用"
       }
     },
     "network_settings": {
