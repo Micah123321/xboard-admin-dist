@@ -658,7 +658,8 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
       "ko-KR": "한국어",
       "vi-VN": "Tiếng Việt",
       "zh-CN": "简体中文",
-      "zh-TW": "繁體中文"
+      "zh-TW": "繁體中文",
+      "ru-RU": "Русский"
     },
     "messages": {
       "deleteConfirm": "确认删除",
@@ -1206,8 +1207,16 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
         "metrics": {
           "title": "运行指标",
           "uptime": "运行时长",
-          "conns": "在线连接",
-          "speed": "实时速率"
+          "conns": "实时/总连接",
+          "speed": "实时速率",
+          "api": "API 状态",
+          "kernel": "内核状态",
+          "gc": "GC 暂停",
+          "limit": "限速用户",
+          "ws": "WebSocket",
+          "goroutines": "并发协程",
+          "load": "系统负载",
+          "users": "在线用户"
         }
       },
       "customId": "自定义ID",
@@ -1333,6 +1342,35 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
       "success": "提交成功"
     },
     "dynamic_form": {
+      "multiplex": {
+        "enabled": {
+          "label": "多路复用 (Multiplex)",
+          "description": "通过单条 TCP 连接传输多个流，降低握手延迟"
+        },
+        "protocol": {
+          "label": "复用协议"
+        },
+        "max_connections": {
+          "label": "最大连接数"
+        },
+        "min_streams": {
+          "label": "最小流数"
+        },
+        "padding": {
+          "label": "启用填充"
+        },
+        "brutal": {
+          "enabled": {
+            "label": "TCP Brutal (激进拥塞控制)"
+          },
+          "up_mbps": {
+            "label": "上行带宽"
+          },
+          "down_mbps": {
+            "label": "下行带宽"
+          }
+        }
+      },
       "anytls": {
         "tls": {
           "server_name": {
@@ -1656,13 +1694,10 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
           "label": "传输协议",
           "placeholder": "选择传输协议"
         },
-        "multiplexing": {
-          "label": "多路复用",
-          "placeholder": "选择多路复用级别",
-          "MULTIPLEXING_OFF": "关闭",
-          "MULTIPLEXING_LOW": "低",
-          "MULTIPLEXING_MIDDLE": "中",
-          "MULTIPLEXING_HIGH": "高"
+        "traffic_pattern": {
+          "label": "流量 (Base64)",
+          "placeholder": "请输入 Base64 字符串用于微调网络行为",
+          "success": "流量模式已生成"
         }
       },
       "cert_config": {
@@ -1708,8 +1743,11 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
         }
       },
       "advanced": {
-        "trigger_label": "高级设置 (TLS / 路由)",
-        "dialog_title": "高级设置"
+        "trigger_label": "高级设置 (TLS / 路由 / 复用)",
+        "dialog_title": "高级协议配置",
+        "tls_tab": "TLS",
+        "route_tab": "路由",
+        "multiplex_tab": "复用"
       }
     },
     "network_settings": {
@@ -2209,6 +2247,7 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
       "limitPlan": {
         "label": "指定订阅",
         "placeholder": "限制指定订阅可以使用优惠，留空则不限制",
+        "description": "选择可以使用优惠券的订阅计划，留空表示不限制计划",
         "empty": "没有找到匹配的订阅"
       },
       "code": {

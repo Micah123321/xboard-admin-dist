@@ -671,7 +671,8 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       "ko-KR": "한국어",
       "vi-VN": "Tiếng Việt",
       "zh-CN": "简体中文",
-      "zh-TW": "繁體中文"
+      "zh-TW": "繁體中文",
+      "ru-RU": "Russian"
     },
     "messages": {
       "deleteConfirm": "Confirm Delete",
@@ -1364,6 +1365,35 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       "success": "Submitted successfully"
     },
     "dynamic_form": {
+      "multiplex": {
+        "enabled": {
+          "label": "Multiplex",
+          "description": "Transport multiple streams via a single TCP connection"
+        },
+        "protocol": {
+          "label": "Protocol"
+        },
+        "max_connections": {
+          "label": "Max Connections"
+        },
+        "min_streams": {
+          "label": "Min Streams"
+        },
+        "padding": {
+          "label": "Enable Padding"
+        },
+        "brutal": {
+          "enabled": {
+            "label": "TCP Brutal"
+          },
+          "up_mbps": {
+            "label": "Upload Bandwidth"
+          },
+          "down_mbps": {
+            "label": "Download Bandwidth"
+          }
+        }
+      },
       "anytls": {
         "tls": {
           "server_name": {
@@ -1685,14 +1715,28 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
           "label": "Transport Protocol",
           "placeholder": "Select transport protocol"
         },
-        "multiplexing": {
-          "label": "Multiplexing",
-          "placeholder": "Select multiplexing level",
-          "MULTIPLEXING_OFF": "Disabled",
-          "MULTIPLEXING_LOW": "Low",
-          "MULTIPLEXING_MIDDLE": "Medium",
-          "MULTIPLEXING_HIGH": "High"
+        "traffic_pattern": {
+          "label": "Traffic Pattern (Base64)",
+          "placeholder": "Enter Base64 string for network fine-tuning",
+          "success": "Traffic pattern generated"
         }
+      },
+      "routing": {
+        "outbounds_tab": "Custom Outbounds",
+        "routes_tab": "Custom Routes",
+        "outbounds": "Custom Outbounds (JSON)",
+        "routes": "Custom Routes (JSON)",
+        "error": {
+          "must_be_array": "Must be a JSON array []",
+          "invalid_json": "Invalid JSON format"
+        }
+      },
+      "advanced": {
+        "trigger_label": "Advanced Config (TLS / Routing / Mux)",
+        "dialog_title": "Advanced Protocol Configuration",
+        "tls_tab": "TLS",
+        "route_tab": "Routing",
+        "multiplex_tab": "Multiplex"
       }
     },
     "network_settings": {
@@ -2189,6 +2233,7 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
       "limitPlan": {
         "label": "Subscription Plans",
         "placeholder": "Limit to specific subscription plans, leave empty for no restrictions",
+        "description": "Select which subscription plans can use this coupon, leave empty for no plan restrictions",
         "empty": "No matching plans found"
       },
       "code": {
