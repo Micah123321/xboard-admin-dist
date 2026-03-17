@@ -1334,7 +1334,8 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
           },
           "down_mbps": {
             "label": "Download Bandwidth"
-          }
+          },
+          "description": "TCP Brutal — двусторонний алгоритм ускорения. Установите пропускную способность 80%-90% от реальной. BBR будет отключён при включении."
         }
       },
       "anytls": {

@@ -1396,7 +1396,8 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
           },
           "down_mbps": {
             "label": "Download Bandwidth"
-          }
+          },
+          "description": "TCP Brutal is a bilateral acceleration algorithm. Set bandwidth to 80%-90% of actual capacity. BBR will be disabled when enabled."
         }
       },
       "anytls": {

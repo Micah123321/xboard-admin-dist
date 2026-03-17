@@ -1373,7 +1373,8 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
           },
           "down_mbps": {
             "label": "下行带宽"
-          }
+          },
+          "description": "TCP Brutal 是双边加速算法，建议带宽设为机器实际带宽的 80%-90%，开启后 BBR 将失效。"
         }
       },
       "anytls": {
