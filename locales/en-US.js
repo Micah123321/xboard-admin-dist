@@ -1524,6 +1524,35 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
           "placeholder": "Used for certificate verification when node address differs from certificate"
         },
         "allow_insecure": "Allow Insecure?",
+        "reality_settings": {
+          "server_name": {
+            "label": "Destination Site (dest)",
+            "placeholder": "e.g., example.com"
+          },
+          "server_port": {
+            "label": "Port",
+            "placeholder": "e.g., 443"
+          },
+          "allow_insecure": "Allow Insecure?",
+          "private_key": {
+            "label": "Private Key"
+          },
+          "public_key": {
+            "label": "Public Key"
+          },
+          "short_id": {
+            "label": "Short ID",
+            "placeholder": "Optional, length must be even, max 16 characters",
+            "description": "List of shortIds available to clients, can be used to distinguish different clients, using hexadecimal characters 0-f",
+            "generate": "Generate Short ID",
+            "success": "Short ID generated successfully"
+          },
+          "key_pair": {
+            "generate": "Generate Key Pair",
+            "success": "Key pair generated successfully",
+            "error": "Failed to generate key pair"
+          }
+        },
         "network": {
           "label": "Transport Protocol",
           "placeholder": "Select transport protocol"

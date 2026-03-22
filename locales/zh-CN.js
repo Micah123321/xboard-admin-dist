@@ -1501,6 +1501,35 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
           "placeholder": "当节点地址于证书不一致时用于证书验证"
         },
         "allow_insecure": "允许不安全?",
+        "reality_settings": {
+          "server_name": {
+            "label": "伪装站点(dest)",
+            "placeholder": "例如：example.com"
+          },
+          "server_port": {
+            "label": "端口(port)",
+            "placeholder": "例如：443"
+          },
+          "allow_insecure": "允许不安全?",
+          "private_key": {
+            "label": "私钥(Private key)"
+          },
+          "public_key": {
+            "label": "公钥(Public key)"
+          },
+          "short_id": {
+            "label": "Short ID",
+            "placeholder": "可留空，长度为2的倍数，最长16位",
+            "description": "客户端可用的 shortId 列表，可用于区分不同的客户端，使用0-f的十六进制字符",
+            "generate": "生成 Short ID",
+            "success": "Short ID 生成成功"
+          },
+          "key_pair": {
+            "generate": "生成密钥对",
+            "success": "密钥对生成成功",
+            "error": "生成密钥对失败"
+          }
+        },
         "network": {
           "label": "传输协议",
           "placeholder": "选择传输协议"
