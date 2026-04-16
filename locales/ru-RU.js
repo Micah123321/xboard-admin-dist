@@ -1,780 +1,351 @@
 window.XBOARD_TRANSLATIONS = window.XBOARD_TRANSLATIONS || {};
 window.XBOARD_TRANSLATIONS['ru-RU'] = {
-  "user": {
-    "manage": {
-      "title": "Управление пользователями",
-      "description": "Здесь вы можете управлять пользователями, включая добавление, удаление, редактирование и поиск."
-    },
-    "columns": {
-      "is_admin": "Админ",
-      "is_staff": "Персонал",
-      "id": "ID",
-      "email": "Email",
-      "online_count": "Устройства онлайн",
-      "status": "Статус",
-      "subscription": "Подписка",
-      "group": "Группа",
-      "used_traffic": "Использовано",
-      "total_traffic": "Всего трафика",
-      "expire_time": "Срок действия",
-      "balance": "Баланс",
-      "commission": "Комиссия",
-      "register_time": "Дата регистрации",
-      "actions": "Действия",
-      "next_reset_at": "След. сброс",
-      "device_limit": {
-        "unlimited": "Без лимита устройств",
-        "limited": "Максимум {{count}} устройств"
-      },
-      "status_text": {
-        "normal": "Нормальный",
-        "banned": "Забанен"
-      },
-      "online_status": {
-        "online": "В сети",
-        "never": "Никогда не был в сети",
-        "last_online": "Был в сети: {{time}}",
-        "offline_duration": {
-          "days": "Не в сети: {{count}}д",
-          "hours": "Не в сети: {{count}}ч",
-          "minutes": "Не в сети: {{count}}м",
-          "seconds": "Не в сети: {{count}}с"
-        }
-      },
-      "expire_status": {
-        "permanent": "Бессрочно",
-        "expired": "Истекло {{days}} дн. назад",
-        "remaining": "Осталось {{days}} дн."
-      },
-      "actions_menu": {
-        "edit": "Редактировать",
-        "view_details": "Просмотреть детали",
-        "assign_order": "Назначить заказ",
-        "copy_url": "Копировать ссылку подписки",
-        "reset_secret": "Сбросить UUID и URL",
-        "orders": "Заказы",
-        "invites": "Приглашения",
-        "traffic_records": "Записи трафика",
-        "reset_traffic": "Сбросить трафик",
-        "delete": "Удалить",
-        "delete_confirm_title": "Подтверждение удаления пользователя",
-        "delete_confirm_description": "Это действие навсегда удалит пользователя {{email}} и все связанные данные, включая заказы, купоны, записи трафика и тикеты. Это действие нельзя отменить. Продолжить?"
+  "theme": {
+    "title": "Конфигурация тем",
+    "description": "Конфигурация тем, включая цвета, размеры шрифтов и т.д. Если вы развернули Xboard с раздельным фронтендом и бэкендом, конфигурация тем не вступит в силу.",
+    "upload": {
+      "button": "Загрузить тему",
+      "title": "Загрузить тему",
+      "description": "Пожалуйста, загрузите корректный пакет темы (формат .zip). Пакет должен содержать полную структуру файлов темы.",
+      "dragText": "Перетащите файл темы сюда или",
+      "clickText": "нажмите для выбора",
+      "supportText": "Поддерживаются пакеты тем в формате .zip",
+      "uploading": "Загрузка...",
+      "error": {
+        "format": "Поддерживаются только файлы тем в формате ZIP"
       }
     },
-    "filter": {
-      "selected": "Выбрано {{count}}",
-      "no_results": "Результатов не найдено.",
-      "clear": "Очистить фильтры",
-      "search_placeholder": "Поиск...",
-      "email_search": "Поиск по email...",
-      "advanced": "Расширенный фильтр",
-      "reset": "Сбросить фильтр",
-      "sheet": {
-        "title": "Расширенный фильтр",
-        "description": "Добавьте одно или несколько условий для точного поиска пользователей",
-        "conditions": "Условия фильтрации",
-        "add": "Добавить условие",
-        "condition": "Условие {{number}}",
-        "field": "Выберите поле",
-        "operator": "Выберите оператор",
-        "value": "Введите значение",
-        "value_number": "Введите значение ({{unit}})",
-        "reset": "Сброс",
-        "apply": "Применить фильтр"
-      },
-      "fields": {
-        "email": "Email",
-        "id": "ID пользователя",
-        "plan_id": "Подписка",
-        "transfer_enable": "Трафик",
-        "total_used": "Использовано",
-        "online_count": "Устройства онлайн",
-        "expired_at": "Срок действия",
-        "uuid": "UUID",
-        "token": "Токен",
-        "banned": "Статус аккаунта",
-        "remark": "Примечание",
-        "inviter_email": "Email пригласителя",
-        "invite_user_id": "ID пригласителя",
-        "is_admin": "Админ",
-        "is_staff": "Персонал"
-      },
-      "operators": {
-        "contains": "Содержит",
-        "eq": "Равно",
-        "gt": "Больше",
-        "lt": "Меньше"
-      },
-      "status": {
-        "normal": "Нормальный",
-        "banned": "Забанен"
-      },
-      "boolean": {
-        "true": "Да",
-        "false": "Нет"
-      }
+    "preview": {
+      "title": "Предпросмотр темы",
+      "imageCount": "{{current}} / {{total}}"
     },
-    "generate": {
-      "button": "Создать пользователя",
-      "title": "Создание пользователя",
-      "form": {
-        "email": "Email",
-        "email_prefix": "Префикс аккаунта (оставьте пустым для пакетной генерации)",
-        "email_domain": "Домен",
-        "password": "Пароль",
-        "password_placeholder": "Оставьте пустым, чтобы использовать email в качестве пароля",
-        "expire_time": "Срок действия",
-        "expire_time_placeholder": "Выберите срок действия, оставьте пустым для бессрочного",
-        "permanent": "Бессрочно",
-        "subscription": "Тарифный план",
-        "subscription_none": "Нет",
-        "generate_count": "Количество для генерации",
-        "generate_count_placeholder": "Введите количество для пакетной генерации",
-        "cancel": "Отмена",
-        "submit": "Создать",
-        "success": "Пользователи созданы",
-        "download_csv": "Скачать как CSV"
-      }
-    },
-    "edit": {
-      "button": "Редактировать пользователя",
-      "title": "Управление пользователем",
-      "form": {
-        "email": "Email",
-        "email_placeholder": "Пожалуйста, введите email",
-        "inviter_email": "Email пригласителя",
-        "inviter_email_placeholder": "Пожалуйста, введите email",
-        "password": "Пароль",
-        "password_placeholder": "Введите новый пароль, если хотите изменить его",
-        "balance": "Баланс",
-        "balance_placeholder": "Пожалуйста, введите баланс",
-        "commission_balance": "Баланс комиссии",
-        "commission_balance_placeholder": "Пожалуйста, введите баланс комиссии",
-        "upload": "Трафик (загрузка)",
-        "upload_placeholder": "Введите трафик загрузки",
-        "download": "Трафик (скачивание)",
-        "download_placeholder": "Введите трафик скачивания",
-        "total_traffic": "Общий трафик",
-        "total_traffic_placeholder": "Пожалуйста, введите трафик",
-        "expire_time": "Срок действия",
-        "expire_time_placeholder": "Выберите дату, оставьте пустым для бессрочного",
-        "expire_time_specific": "Конкретное время",
-        "expire_time_today": "До конца сегодня",
-        "expire_time_permanent": "Бессрочно",
-        "expire_time_1month": "Один месяц",
-        "expire_time_3months": "Три месяца",
-        "expire_time_confirm": "Подтвердить",
-        "subscription": "Тарифный план",
-        "subscription_none": "Нет",
-        "account_status": "Статус аккаунта",
-        "commission_type": "Тип комиссии",
-        "commission_type_system": "По системным настройкам",
-        "commission_type_cycle": "Циклическая комиссия",
-        "commission_type_onetime": "Единоразовая комиссия",
-        "commission_rate": "Ставка комиссии",
-        "commission_rate_placeholder": "Оставьте пустым для системной ставки",
-        "discount": "Эксклюзивная скидка",
-        "discount_placeholder": "Оставьте пустым, если нет скидки",
-        "speed_limit": "Лимит скорости",
-        "speed_limit_placeholder": "Оставьте пустым для безлимита",
-        "device_limit": "Лимит устройств",
-        "device_limit_placeholder": "Оставьте пустым для безлимита",
-        "is_admin": "Админ",
-        "is_staff": "Персонал",
-        "remarks": "Примечания",
-        "remarks_placeholder": "Введите примечания здесь",
-        "cancel": "Отмена",
-        "submit": "Отправить",
-        "success": "Изменено успешно"
-      }
-    },
-    "actions": {
-      "title": "Действия",
-      "send_email": "Отправить Email",
-      "export_csv": "Экспорт в CSV",
-      "traffic_reset_stats": "Статистика сброса трафика",
-      "batch_ban": "Пакетный бан",
-      "confirm_ban": {
-        "title": "Подтверждение пакетного бана",
-        "filtered_description": "Это действие забанит всех пользователей, соответствующих вашим текущим фильтрам. Это нельзя отменить.",
-        "all_description": "Это действие забанит всех пользователей в системе. Это нельзя отменить.",
-        "cancel": "Отмена",
-        "confirm": "Подтвердить бан",
-        "banning": "Баню..."
-      }
-    },
-    "messages": {
-      "success": "Успех",
-      "error": "Ошибка",
-      "export": {
-        "success": "Экспорт выполнен",
-        "failed": "Ошибка экспорта"
-      },
-      "batch_ban": {
-        "success": "Пакетный бан выполнен",
-        "failed": "Ошибка пакетного бана"
-      },
-      "send_mail": {
-        "success": "Email отправлен",
-        "failed": "Ошибка отправки email",
-        "required_fields": "Пожалуйста, заполните обязательные поля"
-      }
-    },
-    "traffic_reset": {
-      "title": "Сброс трафика",
-      "description": "Сбросить трафик для пользователя {{email}}",
-      "tabs": {
-        "reset": "Сбросить трафик",
-        "history": "История сбросов"
-      },
-      "user_info": "Информация о пользователе",
-      "warning": {
-        "title": "Важное уведомление",
-        "irreversible": "Операция сброса трафика необратима, пожалуйста, будьте осторожны",
-        "reset_to_zero": "После сброса трафик загрузки и скачивания пользователя будет обнулен",
-        "logged": "Все операции сброса записываются в системные логи"
-      },
-      "reason": {
-        "label": "Причина сброса",
-        "placeholder": "Введите причину сброса (опционально)",
-        "optional": "Это поле не обязательно и используется для записи причины сброса"
-      },
-      "confirm_reset": "Подтвердить сброс",
-      "resetting": "Сбрасываю...",
-      "reset_success": "Трафик сброшен успешно",
-      "reset_failed": "Ошибка при сбросе трафика",
-      "history": {
-        "summary": "Обзор сбросов",
-        "reset_count": "Количество сбросов",
-        "last_reset": "Последний сброс",
-        "next_reset": "Следующий сброс",
-        "never": "Никогда не сбрасывался",
-        "no_schedule": "Сброс не запланирован",
-        "records": "Записи о сбросе",
-        "recent_records": "Последние 10 записей",
-        "no_records": "Записей о сбросе нет",
-        "reset_time": "Время сброса",
-        "traffic_cleared": "Трафик обнулен"
-      },
-      "stats": {
-        "title": "Статистика сброса трафика",
-        "description": "Просмотр системной статистики сброса трафика",
-        "time_range": "Временной диапазон",
-        "total_resets": "Всего сбросов",
-        "auto_resets": "Автоматические",
-        "manual_resets": "Ручные",
-        "cron_resets": "По расписанию/Cron",
-        "in_period": "За последние {{days}} дн.",
-        "breakdown": "Разбивка по типам",
-        "breakdown_description": "Процентное соотношение различных типов операций сброса",
-        "auto_percentage": "Доля автосбросов",
-        "manual_percentage": "Доля ручных сбросов",
-        "cron_percentage": "Доля сбросов по Cron",
-        "days_options": {
-          "week": "За неделю",
-          "month": "За месяц",
-          "quarter": "За квартал",
-          "year": "За год"
+    "card": {
+      "version": "Версия: {{version}}",
+      "currentTheme": "Текущая тема",
+      "activateTheme": "Активировать тему",
+      "configureTheme": "Настройки темы",
+      "preview": "Предпросмотр",
+      "delete": {
+        "title": "Удалить тему",
+        "description": "Вы уверены, что хотите удалить эту тему? Это действие нельзя отменить.",
+        "button": "Удалить",
+        "error": {
+          "active": "Нельзя удалить активную тему"
         }
       }
     },
-    "traffic_reset_logs": {
-      "title": "Логи сброса трафика",
-      "description": "Просмотр подробных записей всех операций сброса трафика в системе",
-      "columns": {
-        "id": "ID лога",
-        "user": "Пользователь",
-        "reset_type": "Тип сброса",
-        "trigger_source": "Источник",
-        "cleared_traffic": "Обнуленный трафик",
-        "cleared": "Обнулено",
-        "upload": "Загрузка",
-        "download": "Скачивание",
-        "reset_time": "Время сброса",
-        "log_time": "Время записи"
-      },
-      "filters": {
-        "search_user": "Поиск по email...",
-        "reset_type": "Тип сброса",
-        "trigger_source": "Источник",
-        "all_types": "Все типы",
-        "all_sources": "Все источники",
-        "start_date": "Дата начала",
-        "end_date": "Дата окончания",
-        "apply_date": "Применить фильтр",
-        "reset": "Сбросить фильтр",
-        "filter_title": "Параметры фильтрации",
-        "filter_description": "Установите условия для поиска записей о сбросе трафика",
-        "reset_types": {
-          "monthly": "Ежемесячно",
-          "first_day_month": "Первое число месяца",
-          "yearly": "Ежегодно",
-          "first_day_year": "Первое число года",
-          "manual": "Вручную"
-        },
-        "trigger_sources": {
-          "auto": "Автоматически",
-          "manual": "Вручную",
-          "cron": "По расписанию/Cron"
-        }
-      },
-      "actions": {
-        "export": "Экспорт логов",
-        "exporting": "Экспортирую...",
-        "export_success": "Экспорт выполнен успешно",
-        "export_failed": "Ошибка экспорта"
-      },
-      "trigger_descriptions": {
-        "manual": "Сброс трафика выполнен администратором вручную",
-        "cron": "Сброс выполнен автоматически системной задачей (Cron)",
-        "auto": "Автоматический сброс при выполнении условий системы",
-        "other": "Сброс выполнен другим способом"
-      }
-    },
-    "send_mail": {
-      "title": "Отправить Email",
-      "description": "Отправить сообщение выбранным или отфильтрованным пользователям",
-      "subject": "Тема",
-      "content": "Содержимое",
-      "sending": "Отправка...",
-      "send": "Отправить"
-    },
-    "dialog": {
-      "title": "Детали пользователя",
-      "basicInfo": "Основная информация",
-      "subscriptionInfo": "Информация о подписке",
-      "trafficInfo": "Информация о трафике",
-      "financialInfo": "Финансовая информация",
-      "activityInfo": "Активность",
-      "inviteInfo": "Реферальная информация",
-      "timeInfo": "Временные метки",
-      "subscriptionUrl": "Ссылка подписки",
-      "fields": {
-        "userId": "ID пользователя",
-        "email": "Email",
-        "uuid": "UUID",
-        "token": "Токен",
-        "remarks": "Примечания",
-        "subscriptionPlan": "Тариф",
-        "permissionGroup": "Группы доступа",
-        "expiredAt": "Истекает",
-        "deviceLimit": "Лимит устройств",
-        "speedLimit": "Лимит скорости",
-        "transferEnable": "Всего трафика",
-        "uploadUsed": "Использовано (Up)",
-        "downloadUsed": "Использовано (Down)",
-        "totalUsed": "Всего использовано",
-        "lastResetAt": "Последний сброс",
-        "nextResetAt": "Следующий сброс",
-        "resetCount": "Кол-во сбросов",
-        "balance": "Баланс",
-        "commissionBalance": "Баланс комиссии",
-        "commissionType": "Тип комиссии",
-        "commissionRate": "Ставка комиссии",
-        "lastLoginAt": "Последний вход",
-        "lastLoginIp": "IP последнего входа",
-        "lastOnlineAt": "Последний раз онлайн",
-        "onlineCount": "Устройства онлайн",
-        "inviteUser": "Пригласитель",
-        "inviteUserId": "ID пригласителя",
-        "createdAt": "Дата создания",
-        "updatedAt": "Дата обновления",
-        "subscribeUrl": "Ссылка подписки",
-        "telegramId": "Telegram ID"
-      }
-    },
-    "status": {
-      "normal": "Нормальный",
-      "banned": "Забанен",
-      "admin": "Админ",
-      "staff": "Персонал"
+    "config": {
+      "title": "Настройка темы {{name}}",
+      "description": "Изменение стилей темы, макетов и других параметров отображения.",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "success": "Настройки успешно сохранены"
     }
   },
-  "route": {
-    "title": "Управление маршрутами",
-    "description": "Управление группами маршрутов, включая добавление, удаление и редактирование.",
+  "machine": {
+    "title": "Управление серверами",
+    "description": "Просматривайте состояние сервера, нагрузку и размещённые узлы, а также запускайте операции с узлами из операционного представления.",
     "columns": {
-      "id": "ID группы",
-      "remarks": "Примечание",
-      "action": "Действие",
+      "id": "ID",
+      "name": "Имя сервера",
+      "status": "Статус",
+      "nodes": "Узлы",
+      "nodesHosted": "размещено узлов",
+      "nodesIdle": "нет узлов",
+      "load": "Нагрузка",
+      "lastSeen": "Последний отклик",
       "actions": "Действия",
-      "matchRules": "Правил совпадения: {{count}}",
-      "action_value": {
-        "title": "Значение действия",
-        "dns": "DNS: {{value}}",
-        "proxy": "Прокси ({{value}})",
-        "block": "Блокировать доступ",
-        "direct": "Прямое соединение"
-      }
-    },
-    "actions": {
-      "dns": "Разрешать через DNS",
-      "block": "Блокировать",
-      "direct": "Напрямую",
-      "proxy": "Прокси"
-    },
-    "form": {
-      "add": "Добавить маршрут",
-      "edit": "Изменить маршрут",
-      "create": "Создать маршрут",
-      "remarks": "Примечание",
-      "remarksPlaceholder": "Введите примечание",
-      "match": "Правила совпадения",
-      "matchPlaceholder": "example.com\n*.example.com",
-      "action": "Действие",
-      "actionPlaceholder": "Выберите действие",
-      "dns": "DNS Сервер",
-      "dnsPlaceholder": "Введите DNS сервер",
-      "proxy": "Тег выхода",
-      "proxyPlaceholder": "Введите тег выхода (Outbound Tag)",
-      "cancel": "Отмена",
-      "submit": "Отправить",
-      "validation": {
-        "remarks": "Введите корректное примечание"
-      }
+      "online": "Онлайн",
+      "offline": "Оффлайн",
+      "inactive": "Отключён",
+      "noData": "Нет данных о нагрузке",
+      "cpu": "CPU",
+      "memory": "Память",
+      "disk": "Диск",
+      "never": "Никогда",
+      "lastReport": "Отчёт о нагрузке"
     },
     "toolbar": {
-      "searchPlaceholder": "Поиск маршрутов...",
+      "search": "Поиск по имени сервера, заметкам или SID...",
+      "status": "Статус",
+      "nodes": "Узлы",
+      "nodesHosted": "размещено узлов",
+      "nodesIdle": "нет узлов",
+      "with_nodes": "С размещёнными узлами",
+      "idle_nodes": "Свободные серверы",
+      "high_load": "Высокая нагрузка",
+      "online_ratio": "Онлайн",
+      "high_load_count": "Высокая нагрузка",
+      "tip": "Страница помогает быстро оценить состояние серверов, число размещённых узлов и нагрузку ресурсов.",
       "reset": "Сбросить"
     },
-    "messages": {
-      "deleteConfirm": "Подтверждение удаления",
-      "deleteDescription": "Это действие навсегда удалит эту группу маршрутов. Продолжить?",
-      "deleteButton": "Удалить",
-      "deleteSuccess": "Удалено успешно",
-      "createSuccess": "Создано успешно",
-      "updateSuccess": "Обновлено успешно"
-    }
-  },
-  "knowledge": {
-    "title": "База знаний",
-    "description": "Здесь вы можете управлять статьями базы знаний, включая их добавление, удаление и редактирование.",
-    "columns": {
-      "id": "ID",
-      "status": "Статус",
-      "title": "Заголовок",
-      "category": "Категория",
-      "actions": "Действия"
+    "overview": {
+      "total": "Всего серверов",
+      "total_hint": "Всего размещено узлов: {{count}}",
+      "online": "Серверы онлайн",
+      "online_hint": "Есть heartbeat за последние 5 минут",
+      "offline": "Оффлайн / Потеряны",
+      "offline_hint": "Требуется проверить heartbeat или агент",
+      "high_load": "Высокая нагрузка",
+      "high_load_hint": "CPU, память или диск близки к порогу",
+      "nodes_suffix": "узлов",
+      "attention": "Внимание",
+      "stable": "Стабильно",
+      "needs_review": "Проверить",
+      "normal": "Норма"
     },
     "form": {
-      "add": "Добавить статью",
-      "edit": "Изменить статью",
-      "title": "Заголовок",
-      "titlePlaceholder": "Введите заголовок статьи",
-      "category": "Категория",
-      "categoryPlaceholder": "Введите категорию для автоматической группировки",
-      "language": "Язык",
-      "languagePlaceholder": "Выберите язык",
-      "content": "Содержимое",
-      "show": "Показывать",
+      "add": "Добавить сервер",
+      "create": "Новый сервер",
+      "edit": "Редактировать сервер",
+      "createDescription": "Создайте новый сервер для управления несколькими узлами.",
+      "editDescription": "Изменить имя, заметки или статус сервера.",
+      "name": "Имя сервера",
+      "namePlaceholder": "Например HK-01",
+      "nameError": "Введите имя сервера",
+      "notes": "Заметки",
+      "notesPlaceholder": "Необязательные заметки о сервере",
+      "isActive": "Включить сервер",
+      "isActiveDescription": "Отключённые серверы не используются xboard-node.",
       "cancel": "Отмена",
-      "submit": "Отправить"
+      "submit": "Сохранить",
+      "update": "Обновить"
     },
-    "languages": {
-      "en-US": "English",
-      "ja-JP": "日本語",
-      "ko-KR": "한국어",
-      "vi-VN": "Tiếng Việt",
-      "zh-CN": "简体中文",
-      "zh-TW": "繁體中文",
-      "ru-RU": "Русский"
+    "token": {
+      "title": "Токен сервера",
+      "description": "Этот токен используется xboard-node для аутентификации. Храните его в безопасности.",
+      "show": "Показать токен",
+      "hide": "Скрыть токен",
+      "reset": "Сбросить токен",
+      "resetConfirm": "Сбросить токен?",
+      "resetDescription": "Старый токен будет немедленно аннулирован. xboard-node потребует перенастройки.",
+      "copy": "Копировать",
+      "copied": "Токен скопирован",
+      "copiedInline": "Скопировано!",
+      "copyFailed": "Ошибка копирования",
+      "autoHide": "Скроется через {{time}}",
+      "resetSuccess": "Токен сброшен",
+      "createdHint": "Токен показывается только при создании. Сохраните его сейчас."
+    },
+    "install": {
+      "title": "Установить xboard-node",
+      "description": "Выполните эту команду на целевом сервере, чтобы установить xboard-node в режиме machine mode и подключить его к текущей записи сервера.",
+      "copy": "Копировать команду установки",
+      "copied": "Команда установки скопирована",
+      "copiedInline": "Скопировано!",
+      "copyFailed": "Ошибка копирования",
+      "loading": "Генерация команды...",
+      "hint": "Требуются root или sudo, а также Linux-сервер с systemd."
+    },
+    "detail": {
+      "title": "Детали сервера",
+      "info": "Информация",
+      "associatedNodes": "Связанные узлы",
+      "noNodes": "К этому серверу не привязаны узлы.",
+      "nodeId": "ID",
+      "nodeName": "Имя",
+      "nodeType": "Тип",
+      "nodeHost": "Адрес",
+      "nodePort": "Порт",
+      "nodeShow": "Видимый",
+      "nodeEnabled": "Активен",
+      "loadTrend": "Тренд нагрузки",
+      "noHistory": "История нагрузки пока отсутствует.",
+      "openNodeManage": "Открыть управление узлами",
+      "addNodeToServer": "Добавить узел на этот сервер",
+      "nodeCount": "{{count}} узлов",
+      "nodeEnabledCount": "{{count}} активных"
     },
     "messages": {
-      "deleteConfirm": "Подтверждение удаления",
-      "deleteDescription": "Это действие навсегда удалит статью из базы знаний. Вы уверены, что хотите продолжить?",
+      "createSuccess": "Сервер успешно создан",
+      "updateSuccess": "Сервер успешно обновлён",
+      "deleteConfirm": "Удалить сервер?",
+      "deleteDescription": "Связанные узлы будут отвязаны (не удалены). Это действие необратимо.",
       "deleteButton": "Удалить",
-      "operationSuccess": "Операция выполнена успешно"
+      "deleteSuccess": "Сервер успешно удалён",
+      "deleteFailed": "Не удалось удалить сервер",
+      "saveFailed": "Не удалось сохранить сервер",
+      "tokenFetchFailed": "Не удалось получить токен",
+      "tokenResetFailed": "Не удалось сбросить токен"
     },
-    "toolbar": {
-      "searchPlaceholder": "Поиск по базе знаний...",
-      "reset": "Сбросить",
-      "sortModeHint": "Перетаскивайте элементы для сортировки, затем нажмите сохранить",
-      "editSort": "Изменить порядок",
-      "saveSort": "Сохранить порядок"
+    "nodeForm": {
+      "machineId": "Привязать к серверу",
+      "machineIdPlaceholder": "Выберите сервер (необязательно)",
+      "machineIdNone": "Автономное развёртывание",
+      "enabled": "Активен на сервере",
+      "enabledDescription": "Запускать ли узел на привязанном сервере"
     }
   },
-  "giftCard": {
-    "title": "Управление подарочными картами",
-    "description": "Управление шаблонами подарочных карт, кодами активации и записями об использовании.",
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успех",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "close": "Закрыть",
+    "delete": {
+      "success": "Удалено успешно",
+      "failed": "Не удалось удалить"
+    },
+    "edit": "Редактировать",
+    "view": "Просмотр",
+    "toggleNavigation": "Переключить навигацию",
+    "toggleSidebar": "Переключить боковую панель",
+    "search": "Поиск...",
+    "theme": {
+      "light": "Светлая",
+      "dark": "Темная",
+      "system": "Системная"
+    },
+    "user": "Пользователь",
+    "defaultEmail": "user@example.com",
+    "settings": "Настройки",
+    "logout": "Выйти",
+    "copy": {
+      "success": "Скопировано успешно",
+      "failed": "Не удалось скопировать",
+      "error": "Ошибка копирования",
+      "errorLog": "Ошибка при копировании в буфер обмена"
+    },
+    "submit": "Отправить",
+    "saving": "Сохранение...",
+    "table": {
+      "noData": "Нет данных",
+      "pagination": {
+        "selected": "Выбрано {{selected}} из {{total}}",
+        "itemsPerPage": "На странице",
+        "page": "Страница",
+        "pageOf": "из {{total}}",
+        "firstPage": "На первую страницу",
+        "previousPage": "Предыдущая страница",
+        "nextPage": "Следующая страница",
+        "lastPage": "На последнюю страницу"
+      },
+      "viewOptions": {
+        "button": "Столбцы",
+        "label": "Переключить видимость столбцов"
+      }
+    },
+    "update": {
+      "title": "System Update",
+      "newVersion": "New Version Available",
+      "currentVersion": "Current Version",
+      "latestVersion": "Latest Version",
+      "updateLater": "Update Later",
+      "updateNow": "Update Now",
+      "updating": "Updating...",
+      "updateSuccess": "Update successful, system will restart shortly",
+      "updateFailed": "Update failed, please try again later"
+    },
+    "time": {
+      "day": "day",
+      "hour": " hour(s)"
+    },
+    "reset": "Reset",
+    "export": "Export",
+    "currency": {
+      "yuan": "Yuan"
+    },
+    "http": {
+      "notLoggedIn": "Not logged in",
+      "unknownError": "Unknown error",
+      "loginExpired": "Login expired",
+      "noPermission": "No permission",
+      "notFound": "Resource or API not found",
+      "unknownException": "Unknown exception"
+    }
+  },
+  "plugin": {
+    "title": "Управление плагинами",
+    "description": "Управление и настройка системных плагинов",
+    "search": {
+      "placeholder": "Поиск по названию или описанию..."
+    },
+    "type": {
+      "placeholder": "Выберите тип плагина",
+      "all": "Все типы"
+    },
     "tabs": {
-      "templates": "Управление шаблонами",
-      "codes": "Коды активации",
-      "usages": "История использования",
-      "statistics": "Статистика"
+      "all": "Все плагины",
+      "installed": "Установленные",
+      "available": "Доступные"
     },
-    "template": {
-      "title": "Управление шаблонами",
-      "description": "Создание, редактирование и удаление шаблонов подарочных карт.",
-      "table": {
-        "title": "Список шаблонов",
-        "columns": {
-          "id": "ID",
-          "name": "Название",
-          "type": "Тип",
-          "status": "Статус",
-          "sort": "Сортировка",
-          "rewards": "Награды",
-          "created_at": "Дата создания",
-          "actions": "Действия",
-          "no_rewards": "Нет наград"
-        }
-      },
-      "form": {
-        "add": "Добавить шаблон",
-        "edit": "Изменить шаблон",
-        "name": {
-          "label": "Название шаблона",
-          "placeholder": "Введите название шаблона",
-          "required": "Пожалуйста, введите название шаблона"
-        },
-        "sort": {
-          "label": "Сортировка",
-          "placeholder": "Меньшие числа отображаются первыми"
-        },
-        "type": {
-          "label": "Тип",
-          "placeholder": "Выберите тип карты"
-        },
-        "description": {
-          "label": "Описание",
-          "placeholder": "Введите описание подарочной карты"
-        },
-        "status": {
-          "label": "Статус",
-          "description": "Если отключено, этот шаблон нельзя использовать для создания или активации новых карт."
-        },
-        "display": {
-          "title": "Визуальные эффекты"
-        },
-        "theme_color": {
-          "label": "Цвет темы"
-        },
-        "icon": {
-          "label": "Иконка",
-          "placeholder": "Введите URL иконки"
-        },
-        "background_image": {
-          "label": "Фоновое изображение",
-          "placeholder": "Введите URL фонового изображения"
-        },
-        "conditions": {
-          "title": "Условия использования",
-          "new_user_max_days": {
-            "label": "Лимит дней регистрации нового пользователя",
-            "placeholder": "Пример: 7 (Только для пользователей, зарегистрированных в течение 7 дней)"
-          },
-          "new_user_only": {
-            "label": "Только для новых пользователей"
-          },
-          "paid_user_only": {
-            "label": "Только для платных пользователей"
-          },
-          "require_invite": {
-            "label": "Требуется наличие пригласителя"
-          },
-          "allowed_plans": {
-            "label": "Разрешенные тарифы",
-            "placeholder": "Выберите тарифы, доступные для активации (оставьте пустым для всех)"
-          },
-          "disallowed_plans": {
-            "label": "Запрещенные тарифы",
-            "placeholder": "Выберите тарифы, для которых активация запрещена"
-          }
-        },
-        "limits": {
-          "title": "Ограничения",
-          "max_use_per_user": {
-            "label": "Макс. использований на пользователя",
-            "placeholder": "Оставьте пустым для безлимита"
-          },
-          "cooldown_hours": {
-            "label": "Кулдаун (часы) для однотипных карт",
-            "placeholder": "Оставьте пустым для безлимита"
-          },
-          "invite_reward_rate": {
-            "label": "Доля вознаграждения пригласителя",
-            "placeholder": "Пример: 0.2 (означает 20%)",
-            "description": "Если у пользователя есть пригласитель, его бонус = бонус пользователя × эта доля"
-          }
-        },
-        "rewards": {
-          "title": "Награды",
-          "balance": {
-            "label": "Бонусный баланс (Валюта)",
-            "short_label": "Баланс",
-            "placeholder": "Введите сумму вознаграждения"
-          },
-          "transfer_enable": {
-            "label": "Бонусный трафик (ГБ)",
-            "short_label": "Трафик",
-            "placeholder": "Введите объем трафика (ГБ)"
-          },
-          "expire_days": {
-            "label": "Продление срока (дней)",
-            "short_label": "Срок",
-            "placeholder": "Введите количество дней"
-          },
-          "transfer": {
-            "label": "Бонусный трафик (Байты)",
-            "placeholder": "Введите объем трафика (байты)"
-          },
-          "days": {
-            "label": "Продление срока (дней)",
-            "placeholder": "Введите количество дней"
-          },
-          "device_limit": {
-            "label": "Увеличить лимит устройств",
-            "short_label": "Устройства",
-            "placeholder": "Введите количество дополнительных устройств"
-          },
-          "reset_package": {
-            "label": "Сбросить месячный трафик",
-            "description": "Если включено, активация очистит использованный трафик текущего тарифа пользователя."
-          },
-          "reset_count": {
-            "description": "Этот тип карты сбрасывает использование месячного трафика пользователя."
-          },
-          "task_card": {
-            "description": "Награды для бонусных карт за задания настраиваются в системе заданий."
-          },
-          "plan_id": {
-            "label": "Указанный тариф",
-            "short_label": "Тариф",
-            "placeholder": "Пожалуйста, выберите тариф"
-          },
-          "plan_validity_days": {
-            "label": "Срок действия тарифа (дней)",
-            "short_label": "Срок тарифа",
-            "placeholder": "Оставьте пустым для срока по умолчанию"
-          },
-          "random_rewards": {
-            "label": "Пул случайных наград",
-            "add": "Добавить случайную награду",
-            "weight": "Вес"
-          }
-        },
-        "special_config": {
-          "title": "Специальная конфигурация",
-          "start_time": {
-            "label": "Время начала события",
-            "placeholder": "Выберите дату начала"
-          },
-          "end_time": {
-            "label": "Время окончания события",
-            "placeholder": "Выберите дату окончания"
-          },
-          "festival_bonus": {
-            "label": "Множитель праздничной награды",
-            "placeholder": "Пример: 1.5 (означает 1.5x)"
-          }
-        },
-        "submit": {
-          "saving": "Сохранение...",
-          "save": "Сохранить"
-        }
-      },
-      "actions": {
-        "edit": "Изменить",
-        "delete": "Удалить",
-        "deleteConfirm": {
-          "title": "Подтверждение удаления",
-          "description": "Это действие навсегда удалит этот шаблон. Вы уверены, что хотите продолжить?",
-          "confirmText": "Удалить"
-        }
+    "status": {
+      "enabled": "Включено",
+      "disabled": "Отключено",
+      "not_installed": "Не установлено",
+      "protected": "Защищено",
+      "filter_placeholder": "Статус управления",
+      "all": "Все статусы",
+      "installed": "Установленные",
+      "available": "Доступные"
+    },
+    "button": {
+      "install": "Установить",
+      "upgrade": "Обновить",
+      "config": "Настроить",
+      "enable": "Включить",
+      "disable": "Отключить",
+      "uninstall": "Удалить",
+      "readme": "Документация",
+      "menuDemo": "Демо меню"
+    },
+    "upload": {
+      "button": "Загрузить плагин",
+      "title": "Загрузить плагин",
+      "description": "Загрузите пакет плагина (.zip)",
+      "dragText": "Перетащите пакет плагина сюда или",
+      "clickText": "выберите файл",
+      "supportText": "Поддерживаются только .zip файлы",
+      "uploading": "Загрузка...",
+      "error": {
+        "format": "Поддерживаются только .zip файлы"
       }
     },
-    "code": {
-      "title": "Управление кодами активации",
-      "form": {
-        "generate": "Сгенерировать коды активации",
-        "template_id": {
-          "label": "Выберите шаблон",
-          "placeholder": "Выберите шаблон для генерации кодов активации"
-        },
-        "count": {
-          "label": "Количество кодов"
-        },
-        "prefix": {
-          "label": "Кастомный префикс (опционально)"
-        },
-        "expires_hours": {
-          "label": "Срок действия (часов)"
-        },
-        "max_usage": {
-          "label": "Лимит использований кода"
-        },
-        "download_csv": "Экспорт в CSV",
-        "submit": {
-          "generating": "Генерация...",
-          "generate": "Сгенерировать сейчас"
-        }
-      },
-      "description": "Управление кодами активации: генерация, просмотр и экспорт.",
-      "table": {
-        "title": "Список кодов активации",
-        "columns": {
-          "id": "ID",
-          "code": "Код активации",
-          "template_name": "Название шаблона",
-          "status": "Статус",
-          "expires_at": "Истекает",
-          "usage_count": "Использовано",
-          "max_usage": "Доступно",
-          "created_at": "Дата создания"
-        }
-      },
-      "actions": {
-        "enable": "Включить",
-        "disable": "Отключить",
-        "export": "Экспорт",
-        "exportConfirm": {
-          "title": "Подтверждение экспорта",
-          "description": "Все коды из выбранной группы будут экспортированы в текстовый файл. Продолжить?",
-          "confirmText": "Экспорт"
-        }
-      },
-      "status": {
-        "0": "Не использован",
-        "1": "Использован",
-        "2": "Отключен",
-        "3": "Истек"
-      }
+    "delete": {
+      "title": "Удалить плагин",
+      "description": "Вы уверены, что хотите удалить этот плагин? Это действие нельзя отменить.",
+      "button": "Удалить"
     },
-    "usage": {
-      "title": "История использования",
-      "description": "Просмотр записей об использовании подарочных карт.",
-      "table": {
-        "columns": {
-          "id": "ID",
-          "code": "Код активации",
-          "template_name": "Название шаблона",
-          "user_email": "Email пользователя",
-          "rewards_given": "Выданные награды",
-          "invite_rewards": "Бонус пригласителя",
-          "multiplier_applied": "Применен множитель",
-          "ip_address": "IP адрес",
-          "created_at": "Время использования",
-          "actions": "Действия"
-        }
-      },
-      "actions": {
-        "view": "Детали"
-      }
+    "uninstall": {
+      "title": "Удалить плагин из системы",
+      "description": "Вы уверены, что хотите удалить этот плагин? Все данные плагина будут стерты.",
+      "button": "Удалить"
     },
-    "statistics": {
-      "title": "Статистика",
-      "description": "Анализ использования подарочных карт.",
-      "total": {
-        "title": "Общая статистика",
-        "templates_count": "Всего шаблонов",
-        "active_templates_count": "Активных шаблонов",
-        "codes_count": "Всего кодов активации",
-        "used_codes_count": "Использовано кодов",
-        "usages_count": "Записей об активации"
-      },
-      "daily": {
-        "title": "Использование за день"
-      }
+    "upgrade": {
+      "title": "Обновить плагин",
+      "description": "Вы уверены, что хотите обновить этот плагин? Он будет временно недоступен в процессе.",
+      "button": "Обновить"
+    },
+    "config": {
+      "title": "Конфигурация",
+      "description": "Изменение настроек плагина",
+      "save": "Сохранить",
+      "cancel": "Отмена"
+    },
+    "readme": {
+      "title": "Документация плагина"
+    },
+    "author": "Автор",
+    "messages": {
+      "installSuccess": "Плагин успешно установлен",
+      "installError": "Ошибка при установке плагина",
+      "upgradeSuccess": "Плагин успешно обновлен",
+      "upgradeError": "Ошибка при обновлении плагина",
+      "uninstallSuccess": "Плагин успешно удален",
+      "uninstallError": "Ошибка при удалении плагина",
+      "enableSuccess": "Плагин включен",
+      "enableError": "Ошибка включения плагина",
+      "disableSuccess": "Плагин отключен",
+      "disableError": "Ошибка отключения плагина",
+      "configLoadError": "Ошибка загрузки конфигурации плагина",
+      "configSaveSuccess": "Конфигурация сохранена",
+      "configSaveError": "Ошибка сохранения конфигурации",
+      "uploadSuccess": "Плагин загружен",
+      "uploadError": "Ошибка загрузки плагина",
+      "deleteSuccess": "Плагин удален",
+      "deleteError": "Ошибка удаления плагина"
     }
   },
   "group": {
@@ -826,6 +397,7 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
     "paymentConfig": "Настройки оплаты",
     "knowledgeManagement": "База знаний",
     "nodeManagement": "Управление узлами",
+    "machineManagement": "Управление серверами",
     "permissionGroupManagement": "Группы доступа",
     "routeManagement": "Управление маршрутами",
     "subscriptionManagement": "Подписки",
@@ -835,25 +407,343 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
     "giftCardManagement": "Подарочные карты",
     "userManagement": "Пользователи",
     "trafficResetLogs": "Логи сброса трафика",
-    "ticketManagement": "Тикеты"
+    "ticketManagement": "Тикеты",
+    "pluginApps": "Приложения плагинов"
   },
-  "sidebar": {
-    "dashboard": "Панель управления",
-    "systemManagement": "Управление системой",
-    "systemConfig": "Конфигурация системы",
-    "themeConfig": "Конфигурация тем",
-    "noticeManagement": "Объявления",
-    "paymentConfig": "Платежные методы",
-    "knowledgeManagement": "База знаний",
-    "nodeManagement": "Узлы",
-    "permissionGroupManagement": "Группы прав",
-    "routeManagement": "Маршруты",
-    "subscriptionManagement": "Управление подписками",
-    "planManagement": "Тарифы",
-    "orderManagement": "Заказы",
-    "couponManagement": "Купоны",
-    "userManagement": "Пользователи",
-    "ticketManagement": "Тикеты"
+  "auth": {
+    "signIn": {
+      "title": "Вход",
+      "description": "Введите свой email и пароль для входа",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "password": "Пароль",
+      "passwordPlaceholder": "Введите ваш пароль",
+      "forgotPassword": "Забыли пароль?",
+      "submit": "Войти",
+      "rememberMe": "Запомнить меня",
+      "resetPassword": {
+        "title": "Сброс пароля",
+        "description": "Выполните следующую команду в директории сайта, чтобы сбросить пароль",
+        "command": "php artisan reset:password admin-email"
+      },
+      "validation": {
+        "emailRequired": "Пожалуйста, введите адрес электронной почты",
+        "emailInvalid": "Пожалуйста, введите корректный адрес электронной почты",
+        "passwordRequired": "Пожалуйста, введите пароль",
+        "passwordLength": "Пароль должен содержать не менее 7 символов"
+      }
+    }
+  },
+  "notice": {
+    "title": "Управление объявлениями",
+    "description": "Здесь вы можете настраивать объявления, включая добавление, удаление, редактирование и другие операции.",
+    "table": {
+      "columns": {
+        "id": "ID",
+        "show": "Статус показа",
+        "title": "Заголовок",
+        "actions": "Действия"
+      },
+      "toolbar": {
+        "search": "Поиск по заголовку...",
+        "reset": "Сброс",
+        "sort": {
+          "edit": "Изменить порядок",
+          "save": "Сохранить порядок"
+        }
+      },
+      "actions": {
+        "edit": "Изменить",
+        "delete": {
+          "title": "Подтверждение удаления",
+          "description": "Вы уверены, что хотите удалить это объявление? Это действие нельзя отменить.",
+          "success": "Успешно удалено"
+        }
+      }
+    },
+    "form": {
+      "add": {
+        "title": "Добавить объявление",
+        "button": "Добавить объявление"
+      },
+      "edit": {
+        "title": "Изменить объявление"
+      },
+      "fields": {
+        "title": {
+          "label": "Заголовок",
+          "placeholder": "Введите заголовок объявления"
+        },
+        "content": {
+          "label": "Содержимое"
+        },
+        "img_url": {
+          "label": "Фоновое изображение",
+          "placeholder": "Введите URL фонового изображения"
+        },
+        "show": {
+          "label": "Показывать"
+        },
+        "tags": {
+          "label": "Теги",
+          "placeholder": "Нажмите Enter для добавления тегов"
+        }
+      },
+      "buttons": {
+        "cancel": "Отмена",
+        "submit": "Отправить",
+        "success": "Успешно отправлено"
+      }
+    }
+  },
+  "order": {
+    "title": "Управление заказами",
+    "description": "Здесь вы можете просматривать заказы пользователей, включая назначение, просмотр, удаление и другие операции.",
+    "table": {
+      "columns": {
+        "tradeNo": "№ Заказа",
+        "type": "Тип",
+        "plan": "Тарифный план",
+        "period": "Период",
+        "amount": "Сумма оплаты",
+        "status": "Статус заказа",
+        "commission": "Сумма комиссии",
+        "commissionStatus": "Статус комиссии",
+        "createdAt": "Создан"
+      }
+    },
+    "type": {
+      "NEW": "Новая покупка",
+      "RENEWAL": "Продление",
+      "UPGRADE": "Апгрейд (Переход)",
+      "RESET_FLOW": "Сброс трафика"
+    },
+    "period": {
+      "month_price": "Ежемесячно",
+      "quarter_price": "Ежеквартально",
+      "half_year_price": "Раз в полгода",
+      "year_price": "Ежегодно",
+      "two_year_price": "Раз в 2 года",
+      "three_year_price": "Раз в 3 года",
+      "onetime_price": "Единоразово",
+      "reset_price": "Пакет сброса"
+    },
+    "status": {
+      "PENDING": "Ожидание",
+      "PROCESSING": "В обработке",
+      "CANCELLED": "Отменен",
+      "COMPLETED": "Завершен",
+      "DISCOUNTED": "Скидка",
+      "tooltip": "После пометки [Оплачено] система выполнит активацию и завершит заказ"
+    },
+    "commission": {
+      "PENDING": "Ожидание",
+      "PROCESSING": "В обработке",
+      "VALID": "Действительна",
+      "INVALID": "Недействительна"
+    },
+    "actions": {
+      "markAsPaid": "Пометить как оплаченный",
+      "cancel": "Отменить заказ",
+      "openMenu": "Открыть меню",
+      "reset": "Сбросить"
+    },
+    "search": {
+      "placeholder": "Поиск заказов..."
+    },
+    "dialog": {
+      "title": "Информация о заказе",
+      "basicInfo": "Основная информация",
+      "amountInfo": "Информация о стоимости",
+      "timeInfo": "Временные метки",
+      "commissionInfo": "Информация о комиссии",
+      "commissionStatusActive": "Активна",
+      "addOrder": "Добавить заказ",
+      "assignOrder": "Назначить заказ",
+      "fields": {
+        "userEmail": "Email пользователя",
+        "orderPeriod": "Период заказа",
+        "subscriptionPlan": "Тарифный план",
+        "callbackNo": "№ Транзакции (Callback)",
+        "paymentAmount": "Сумма к оплате",
+        "balancePayment": "Оплата с баланса",
+        "discountAmount": "Сумма скидки",
+        "refundAmount": "Сумма возврата",
+        "deductionAmount": "Сумма вычета",
+        "createdAt": "Дата создания",
+        "updatedAt": "Дата обновления",
+        "commissionStatus": "Статус комиссии",
+        "commissionAmount": "Заработок комиссии",
+        "actualCommissionAmount": "Фактическая комиссия",
+        "inviteUser": "Пригласитель",
+        "inviteUserId": "ID пригласителя"
+      },
+      "placeholders": {
+        "email": "Введите email пользователя",
+        "plan": "Выберите тарифный план",
+        "period": "Выберите период подписки",
+        "amount": "Введите сумму оплаты"
+      },
+      "actions": {
+        "cancel": "Отмена",
+        "confirm": "Подтвердить"
+      },
+      "messages": {
+        "addOrder": "Заказ успешно добавлен",
+        "addSuccess": "Успешно добавлено"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "stats": {
+      "newUsers": "Новые пользователи",
+      "totalScore": "Общий балл",
+      "monthlyUpload": "Загружено за месяц",
+      "vsLastMonth": "к прошлому месяцу",
+      "vsYesterday": "со вчера",
+      "todayIncome": "Доход за сегодня",
+      "monthlyIncome": "Доход за месяц",
+      "totalIncome": "Общий доход",
+      "totalUsers": "Всего пользователей",
+      "activeUsers": "Активных: {{count}}",
+      "totalOrders": "Всего заказов",
+      "revenue": "Выручка",
+      "todayRegistered": "Зарегистрировано сегодня",
+      "monthlyRegistered": "Зарегистрировано за месяц",
+      "onlineUsers": "Онлайн",
+      "pendingTickets": "Открытых тикетов",
+      "hasPendingTickets": "Есть тикеты, требующие ответа",
+      "noPendingTickets": "Нет открытых тикетов",
+      "pendingCommission": "Комиссии на выплату",
+      "hasPendingCommission": "Есть комиссии, требующие подтверждения",
+      "noPendingCommission": "Нет комиссий на выплату",
+      "monthlyNewUsers": "Новых за месяц",
+      "monthlyDownload": "Скачано за месяц",
+      "todayTraffic": "Сегодня: {{value}}",
+      "activeUserTrend": "Тренды активности",
+      "realtimeUsers": "Пользователи в реальном времени",
+      "todayPeak": "Пик за сегодня",
+      "vsLastWeek": "к прошлой неделе"
+    },
+    "trafficRank": {
+      "nodeTrafficRank": "Рейтинг узлов",
+      "userTrafficRank": "Рейтинг пользователей",
+      "today": "Сегодня",
+      "last7days": "7 дней",
+      "last30days": "30 дней",
+      "customRange": "Свой диапазон",
+      "selectTimeRange": "Выбрать период",
+      "selectDateRange": "Выбрать даты",
+      "currentTraffic": "Трафик за период",
+      "previousTraffic": "Трафик ранее",
+      "changeRate": "Изменение",
+      "recordTime": "Время записи"
+    },
+    "overview": {
+      "title": "Обзор доходов",
+      "thisMonth": "Этот месяц",
+      "lastMonth": "Прошлый месяц",
+      "to": "по",
+      "selectTimeRange": "Выбрать диапазон",
+      "selectDate": "Выбрать дату",
+      "last7Days": "7 дней",
+      "last30Days": "30 дней",
+      "last90Days": "90 дней",
+      "last180Days": "180 дней",
+      "lastYear": "Год",
+      "customRange": "Свой диапазон",
+      "amount": "Сумма",
+      "count": "Количество",
+      "transactions": "Транзакций: {{count}}",
+      "orderAmount": "Сумма заказов",
+      "commissionAmount": "Сумма комиссий",
+      "orderCount": "Заказов",
+      "commissionCount": "Комиссий",
+      "totalIncome": "Прибыль",
+      "totalCommission": "Всего комиссий",
+      "totalTransactions": "Транзакций: {{count}}",
+      "avgOrderAmount": "Средний чек:",
+      "commissionRate": "Доля комиссий:"
+    },
+    "traffic": {
+      "title": "Рейтинг трафика",
+      "rank": "Место",
+      "domain": "Домен",
+      "todayTraffic": "Трафик сегодня",
+      "monthlyTraffic": "Трафик за месяц"
+    },
+    "queue": {
+      "title": "Очереди",
+      "jobDetails": "Детали задачи",
+      "status": {
+        "description": "Текущий статус выполнения очередей",
+        "running": "Статус",
+        "normal": "Норма",
+        "abnormal": "Ошибка",
+        "waitTime": "Ожидание: {{seconds}} сек.",
+        "pending": "В очереди",
+        "processing": "В процессе",
+        "completed": "Завершено",
+        "failed": "Ошибка",
+        "cancelled": "Отменено"
+      },
+      "details": {
+        "description": "Технические детали очередей",
+        "recentJobs": "Последние задачи",
+        "statisticsPeriod": "Период статистики: {{hours}} ч.",
+        "jobsPerMinute": "Задач в минуту",
+        "maxThroughput": "Пиковая нагрузка: {{value}}",
+        "failedJobs7Days": "Ошибки (7 дней)",
+        "retentionPeriod": "Период хранения: {{hours}} ч.",
+        "longestRunningQueue": "Самая длинная очередь",
+        "activeProcesses": "Активные процессы",
+        "id": "ID задачи",
+        "type": "Тип задачи",
+        "status": "Статус",
+        "progress": "Прогресс",
+        "createdAt": "Создано",
+        "updatedAt": "Обновлено",
+        "error": "Ошибка",
+        "data": "Данные задачи",
+        "result": "Результат",
+        "duration": "Длительность",
+        "attempts": "Попыток",
+        "nextRetry": "Минут до повтора",
+        "failedJobsDetailTitle": "Ошибки очередей",
+        "viewFailedJobs": "Ошибки",
+        "jobDetailTitle": "Детали выполнения",
+        "time": "Время",
+        "queue": "Очередь",
+        "name": "Имя задачи",
+        "exception": "Исключение",
+        "noFailedJobs": "Ошибок не найдено",
+        "connection": "Соединение",
+        "payload": "Payload",
+        "viewDetail": "Детали",
+        "action": "Действие"
+      },
+      "actions": {
+        "retry": "Повтор",
+        "cancel": "Отмена",
+        "delete": "Удалить",
+        "viewDetails": "Подробнее"
+      },
+      "empty": "Задач не найдено",
+      "loading": "Загрузка статуса очередей...",
+      "error": "Ошибка загрузки статуса"
+    },
+    "common": {
+      "refresh": "Обновить",
+      "close": "Закрыть",
+      "pagination": "Страница {{current}}/{{total}}, всего {{count}}"
+    },
+    "search": {
+      "placeholder": "Поиск меню и функций...",
+      "title": "Навигация",
+      "noResults": "Ничего не найдено",
+      "loading": "Поиск..."
+    }
   },
   "server": {
     "title": "Конфигурация узла",
@@ -883,7 +773,11 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
     "saving": "Сохранение...",
     "manage": {
       "title": "Управление узлами",
-      "description": "Управление всеми узлами, включая добавление, удаление, редактирование и другие операции."
+      "description": "Управление всеми узлами, включая добавление, удаление, редактирование и другие операции.",
+      "filtered_by_server": "Сейчас показаны узлы сервера {{server}} (SID:{{id}})",
+      "filtered_by_server_description": "Новые узлы здесь можно сразу привязать к текущему серверу.",
+      "add_node_to_server": "Добавить узел на этот сервер",
+      "clear_server_filter": "Сбросить фильтр сервера"
     },
     "columns": {
       "sort": "Сортировка",
@@ -934,11 +828,30 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       "actions": "Действия",
       "copyAddress": "Копировать адрес",
       "internalPort": "Внутр. порт",
+      "deployment": {
+        "title": "Развёртывание",
+        "tooltip": "Показывает, работает ли узел автономно или размещён на сервере, и позволяет менять это прямо в списке.",
+        "standalone": "Автономно",
+        "standalone_row_hint": "Без привязки к серверу",
+        "standalone_description": "Этот узел работает независимо и не требует серверного хостинга.",
+        "online": "Сервер онлайн",
+        "offline": "Сервер офлайн",
+        "inactive": "Сервер неактивен",
+        "disabled": "Узел выключен",
+        "enabled": "Включить на сервере",
+        "enabled_description": "Только включённые узлы будут запускаться и синхронизироваться выбранным сервером.",
+        "enabled_standalone_description": "Для автономных узлов серверное состояние включения не требуется.",
+        "bind_success": "Размещено на {{server}}",
+        "standalone_success": "Переключено в автономное развёртывание",
+        "update_success": "Развёртывание обновлено",
+        "update_error": "Не удалось обновить развёртывание"
+      },
       "status": {
         "0": "Не запущен",
         "1": "Не используется или ошибка",
         "2": "Работает нормально"
       },
+      "childNode": "Дочерний узел",
       "actions_dropdown": {
         "edit": "Редактировать",
         "copy": "Копировать",
@@ -954,12 +867,45 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
     "toolbar": {
       "search": "Поиск узлов...",
       "type": "Тип",
+      "server": "Сервер",
+      "server_search": "Поиск серверов...",
+      "server_empty": "Серверы не найдены",
       "reset": "Сброс",
+      "actions": "Действия",
       "sort": {
         "tip": "Перетаскивайте узлы для сортировки, затем нажмите сохранить",
         "edit": "Редактировать порядок",
-        "save": "Сохранить порядок"
-      }
+        "save": "Сохранить порядок",
+        "success": "Порядок сортировки сохранён"
+      },
+      "batch_delete": {
+        "menu": "Удалить узлы",
+        "button": "Удалить {{count}} шт.",
+        "title": "Подтверждение удаления",
+        "description": "Вы уверены, что хотите удалить {{count}} узлов? Это действие необратимо.",
+        "confirm": "Подтвердить удаление"
+      },
+      "batch_delete_success": "Успешно удалено {{count}} узлов",
+      "batch_delete_error": "Ошибка пакетного удаления",
+      "batch_show": {
+        "menu": "Показать узлы"
+      },
+      "batch_show_success": "Успешно показано {{count}} узлов",
+      "batch_show_error": "Ошибка пакетного показа",
+      "batch_hide": {
+        "menu": "Скрыть узлы"
+      },
+      "batch_hide_success": "Успешно скрыто {{count}} узлов",
+      "batch_hide_error": "Ошибка пакетного скрытия",
+      "batch_reset_traffic": {
+        "menu": "Сбросить трафик",
+        "button": "Сбросить {{count}} шт.",
+        "title": "Подтверждение сброса трафика",
+        "description": "Вы уверены, что хотите сбросить трафик {{count}} узлов? Это обнулит трафик и снимет блокировки.",
+        "confirm": "Подтвердить сброс"
+      },
+      "batch_reset_traffic_success": "Успешно сброшен трафик {{count}} узлов",
+      "batch_reset_traffic_error": "Ошибка пакетного сброса трафика"
     },
     "form": {
       "add_node": "Добавить узел",
@@ -1077,6 +1023,35 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
             "label": "Download Bandwidth"
           },
           "description": "TCP Brutal — двусторонний алгоритм ускорения. Установите пропускную способность 80%-90% от реальной. BBR будет отключён при включении."
+        }
+      },
+      "ech": {
+        "description": "Включает Encrypted Client Hello для поддерживаемых TLS-клиентов. Если конфигурация пуста, будет выполнен DNS-запрос.",
+        "generate": "Авто-генерация ECH ключей",
+        "config": {
+          "label": "ECH Config (PEM)",
+          "placeholder": "Вставьте конфигурацию ECH в формате PEM, по одной строке на строку",
+          "description": "Если пусто, sing-box попробует загрузить конфигурацию ECH из DNS."
+        },
+        "config_path": {
+          "label": "Путь к конфигу ECH",
+          "placeholder": "/etc/sing-box/ech.pem",
+          "description": "Путь к файлу конфигурации ECH в формате PEM."
+        },
+        "query_server_name": {
+          "label": "Имя сервера для запроса ECH",
+          "placeholder": "Необязательная замена домена для HTTPS-запроса",
+          "description": "Переопределяет домен для ECH HTTPS-запросов. По умолчанию используется server_name."
+        },
+        "key": {
+          "label": "ECH Key",
+          "placeholder": "Вставьте содержимое ECH key, если это требуется бэкенду",
+          "description": "Необязательное содержимое ECH key для бэкенда."
+        },
+        "key_path": {
+          "label": "Путь к ECH key",
+          "placeholder": "/etc/sing-box/ech.key",
+          "description": "Путь к файлу ECH key, если это требуется бэкенду."
         }
       },
       "anytls": {
@@ -1477,146 +1452,209 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       "confirm": "Confirm"
     }
   },
-  "common": {
-    "loading": "Загрузка...",
-    "error": "Ошибка",
-    "success": "Успех",
-    "save": "Сохранить",
-    "cancel": "Отмена",
-    "confirm": "Подтвердить",
-    "close": "Закрыть",
-    "delete": {
-      "success": "Удалено успешно",
-      "failed": "Не удалось удалить"
-    },
-    "edit": "Редактировать",
-    "view": "Просмотр",
-    "toggleNavigation": "Переключить навигацию",
-    "toggleSidebar": "Переключить боковую панель",
-    "search": "Поиск...",
-    "theme": {
-      "light": "Светлая",
-      "dark": "Темная",
-      "system": "Системная"
-    },
-    "user": "Пользователь",
-    "defaultEmail": "user@example.com",
-    "settings": "Настройки",
-    "logout": "Выйти",
-    "copy": {
-      "success": "Скопировано успешно",
-      "failed": "Не удалось скопировать",
-      "error": "Ошибка копирования",
-      "errorLog": "Ошибка при копировании в буфер обмена"
-    },
-    "submit": "Отправить",
-    "saving": "Сохранение...",
-    "table": {
-      "noData": "Нет данных",
-      "pagination": {
-        "selected": "Выбрано {{selected}} из {{total}}",
-        "itemsPerPage": "На странице",
-        "page": "Страница",
-        "pageOf": "из {{total}}",
-        "firstPage": "На первую страницу",
-        "previousPage": "Предыдущая страница",
-        "nextPage": "Следующая страница",
-        "lastPage": "На последнюю страницу"
-      },
-      "viewOptions": {
-        "button": "Столбцы",
-        "label": "Переключить видимость столбцов"
-      }
-    },
-    "update": {
-      "title": "System Update",
-      "newVersion": "New Version Available",
-      "currentVersion": "Current Version",
-      "latestVersion": "Latest Version",
-      "updateLater": "Update Later",
-      "updateNow": "Update Now",
-      "updating": "Updating...",
-      "updateSuccess": "Update successful, system will restart shortly",
-      "updateFailed": "Update failed, please try again later"
-    },
-    "time": {
-      "day": "day",
-      "hour": " hour(s)"
-    },
-    "reset": "Reset",
-    "export": "Export",
-    "currency": {
-      "yuan": "Yuan"
-    },
-    "http": {
-      "notLoggedIn": "Not logged in",
-      "unknownError": "Unknown error",
-      "loginExpired": "Login expired",
-      "noPermission": "No permission",
-      "notFound": "Resource or API not found",
-      "unknownException": "Unknown exception"
+  "search": {
+    "placeholder": "Поиск меню и функций...",
+    "title": "Навигация по меню",
+    "noResults": "Результатов не найдено",
+    "shortcut": {
+      "label": "Поиск",
+      "key": "⌘K"
     }
   },
-  "notice": {
-    "title": "Управление объявлениями",
-    "description": "Здесь вы можете настраивать объявления, включая добавление, удаление, редактирование и другие операции.",
+  "coupon": {
+    "title": "Управление купонами",
+    "description": "Здесь вы можете управлять купонами на скидку, включая их добавление, просмотр и удаление.",
     "table": {
       "columns": {
         "id": "ID",
-        "show": "Статус показа",
-        "title": "Заголовок",
+        "show": "Включен",
+        "name": "Название",
+        "type": "Тип",
+        "code": "Код",
+        "limitUse": "Осталось исп.",
+        "limitUseWithUser": "Исп. на чел.",
+        "validity": "Срок действия",
         "actions": "Действия"
       },
-      "toolbar": {
-        "search": "Поиск по заголовку...",
-        "reset": "Сброс",
-        "sort": {
-          "edit": "Изменить порядок",
-          "save": "Сохранить порядок"
-        }
+      "validity": {
+        "expired": "Истек {{days}} дн. назад",
+        "notStarted": "Начнется через {{days}} дн.",
+        "remaining": "Осталось {{days}} дн.",
+        "startTime": "Начало",
+        "endTime": "Конец",
+        "unlimited": "Бессрочно",
+        "noLimit": "Без лимита"
       },
       "actions": {
         "edit": "Изменить",
-        "delete": {
+        "delete": "Удалить",
+        "deleteConfirm": {
           "title": "Подтверждение удаления",
-          "description": "Вы уверены, что хотите удалить это объявление? Это действие нельзя отменить.",
-          "success": "Успешно удалено"
+          "description": "Это действие навсегда удалит этот купон. Вы уверены, что хотите продолжить?",
+          "confirmText": "Удалить"
+        }
+      },
+      "toolbar": {
+        "search": "Поиск купонов...",
+        "type": "Тип",
+        "reset": "Сбросить",
+        "types": {
+          "1": "Фиксированная сумма",
+          "2": "Процент"
         }
       }
     },
     "form": {
-      "add": {
-        "title": "Добавить объявление",
-        "button": "Добавить объявление"
+      "add": "Добавить купон",
+      "edit": "Изменить купон",
+      "name": {
+        "label": "Название купона",
+        "placeholder": "Введите название купона",
+        "required": "Пожалуйста, введите название купона"
       },
-      "edit": {
-        "title": "Изменить объявление"
+      "type": {
+        "label": "Тип и значение купона",
+        "placeholder": "Выберите тип купона"
       },
-      "fields": {
-        "title": {
-          "label": "Заголовок",
-          "placeholder": "Введите заголовок объявления"
-        },
-        "content": {
-          "label": "Содержимое"
-        },
-        "img_url": {
-          "label": "Фоновое изображение",
-          "placeholder": "Введите URL фонового изображения"
-        },
-        "show": {
-          "label": "Показывать"
-        },
-        "tags": {
-          "label": "Теги",
-          "placeholder": "Нажмите Enter для добавления тегов"
+      "value": {
+        "placeholder": "Введите значение"
+      },
+      "validity": {
+        "label": "Срок действия",
+        "to": "до",
+        "endTimeError": "Время окончания должно быть позже времени начала"
+      },
+      "limitUse": {
+        "label": "Максимальное количество использований",
+        "placeholder": "Оставьте пустым для неограниченного использования",
+        "description": "Установите общее количество раз, которое этот купон может быть использован"
+      },
+      "limitUseWithUser": {
+        "label": "Лимит на пользователя",
+        "placeholder": "Оставьте пустым для неограниченного использования",
+        "description": "Ограничьте, сколько раз каждый пользователь может использовать этот купон"
+      },
+      "limitPeriod": {
+        "label": "Периоды подписки",
+        "placeholder": "Ограничить конкретными периодами, оставьте пустым для всех",
+        "description": "Выберите периоды подписки, для которых применим этот купон",
+        "empty": "Периоды не найдены"
+      },
+      "limitPlan": {
+        "label": "Тарифные планы",
+        "placeholder": "Ограничить конкретными тарифами, оставьте пустым для всех",
+        "description": "Выберите тарифные планы, для которых применим этот купон, оставьте пустым для всех",
+        "empty": "Тарифы не найдены"
+      },
+      "code": {
+        "label": "Кастомный код купона",
+        "placeholder": "Оставьте пустым для автогенерации",
+        "description": "Вы можете задать свой код купона или оставить поле пустым"
+      },
+      "generateCount": {
+        "label": "Количество для генерации",
+        "placeholder": "Сколько купонов создать, оставьте пустым для одного",
+        "description": "Сгенерировать несколько кодов купонов за один раз"
+      },
+      "submit": {
+        "saving": "Сохранение...",
+        "save": "Сохранить"
+      },
+      "error": {
+        "saveFailed": "Не удалось сохранить купон"
+      },
+      "timeRange": {
+        "quickSet": "Быстрая установка",
+        "presets": {
+          "1week": "1 Неделя",
+          "2weeks": "2 Недели",
+          "1month": "1 Месяц",
+          "3months": "3 Месяца",
+          "6months": "6 Месяцев",
+          "1year": "1 Год"
         }
-      },
-      "buttons": {
-        "cancel": "Отмена",
-        "submit": "Отправить",
-        "success": "Успешно отправлено"
       }
+    },
+    "period": {
+      "monthly": "Ежемесячно",
+      "quarterly": "Ежеквартально",
+      "half_yearly": "Раз в полгода",
+      "yearly": "Ежегодно",
+      "two_yearly": "Раз в 2 года",
+      "three_yearly": "Раз в 3 года",
+      "onetime": "Единоразово",
+      "reset_traffic": "Сброс трафика"
+    }
+  },
+  "traffic": {
+    "trafficRecord": {
+      "title": "Записи использования трафика",
+      "time": "Время",
+      "upload": "Отдача",
+      "download": "Загрузка",
+      "rate": "Множитель",
+      "total": "Всего",
+      "noRecords": "Записей не найдено",
+      "perPage": "Показывать по",
+      "records": "записей",
+      "page": "Страница {{current}} / {{total}}",
+      "multiplier": "{{value}}x"
+    }
+  },
+  "route": {
+    "title": "Управление маршрутами",
+    "description": "Управление группами маршрутов, включая добавление, удаление и редактирование.",
+    "columns": {
+      "id": "ID группы",
+      "remarks": "Примечание",
+      "action": "Действие",
+      "actions": "Действия",
+      "matchRules": "Правил совпадения: {{count}}",
+      "action_value": {
+        "title": "Значение действия",
+        "dns": "DNS: {{value}}",
+        "proxy": "Прокси ({{value}})",
+        "block": "Блокировать доступ",
+        "direct": "Прямое соединение"
+      }
+    },
+    "actions": {
+      "dns": "Разрешать через DNS",
+      "block": "Блокировать",
+      "direct": "Напрямую",
+      "proxy": "Прокси"
+    },
+    "form": {
+      "add": "Добавить маршрут",
+      "edit": "Изменить маршрут",
+      "create": "Создать маршрут",
+      "remarks": "Примечание",
+      "remarksPlaceholder": "Введите примечание",
+      "match": "Правила совпадения",
+      "matchPlaceholder": "example.com\n*.example.com",
+      "action": "Действие",
+      "actionPlaceholder": "Выберите действие",
+      "dns": "DNS Сервер",
+      "dnsPlaceholder": "Введите DNS сервер",
+      "proxy": "Тег выхода",
+      "proxyPlaceholder": "Введите тег выхода (Outbound Tag)",
+      "cancel": "Отмена",
+      "submit": "Отправить",
+      "validation": {
+        "remarks": "Введите корректное примечание"
+      }
+    },
+    "toolbar": {
+      "searchPlaceholder": "Поиск маршрутов...",
+      "reset": "Сбросить"
+    },
+    "messages": {
+      "deleteConfirm": "Подтверждение удаления",
+      "deleteDescription": "Это действие навсегда удалит эту группу маршрутов. Продолжить?",
+      "deleteButton": "Удалить",
+      "deleteSuccess": "Удалено успешно",
+      "createSuccess": "Создано успешно",
+      "updateSuccess": "Обновлено успешно"
     }
   },
   "settings": {
@@ -2256,20 +2294,23 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       }
     }
   },
-  "traffic": {
-    "trafficRecord": {
-      "title": "Записи использования трафика",
-      "time": "Время",
-      "upload": "Отдача",
-      "download": "Загрузка",
-      "rate": "Множитель",
-      "total": "Всего",
-      "noRecords": "Записей не найдено",
-      "perPage": "Показывать по",
-      "records": "записей",
-      "page": "Страница {{current}} / {{total}}",
-      "multiplier": "{{value}}x"
-    }
+  "sidebar": {
+    "dashboard": "Панель управления",
+    "systemManagement": "Управление системой",
+    "systemConfig": "Конфигурация системы",
+    "themeConfig": "Конфигурация тем",
+    "noticeManagement": "Объявления",
+    "paymentConfig": "Платежные методы",
+    "knowledgeManagement": "База знаний",
+    "nodeManagement": "Узлы",
+    "permissionGroupManagement": "Группы прав",
+    "routeManagement": "Маршруты",
+    "subscriptionManagement": "Управление подписками",
+    "planManagement": "Тарифы",
+    "orderManagement": "Заказы",
+    "couponManagement": "Купоны",
+    "userManagement": "Пользователи",
+    "ticketManagement": "Тикеты"
   },
   "ticket": {
     "title": "Управление тикетами",
@@ -2304,7 +2345,7 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       "view_details": "Детали",
       "close_ticket": "Закрыть тикет",
       "close_confirm_title": "Подтверждение закрытия",
-      "close_confirm_description": "Вы уверены, что хотите закрыть этот тикет? После закрытия ответы будут невозможны.",
+      "close_confirm_description": "Вы уверены, что хотите закрыть этот тикет? Он переместится в список закрытых, но отвечать в нем все равно можно.",
       "close_confirm_button": "Закрыть тикет",
       "close_success": "Тикет успешно закрыт",
       "view_ticket": "Посмотреть тикет"
@@ -2316,7 +2357,8 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       "traffic_records": "История трафика",
       "order_records": "История заказов",
       "input": {
-        "closed_placeholder": "Тикет закрыт",
+        "closed_reply_placeholder": "Тикет закрыт, но вы все еще можете ответить...",
+        "closed_hint": "Тикет закрыт, но вы все еще можете отвечать. Новые сообщения будут добавлены в текущий тикет.",
         "reply_placeholder": "Введите ваш ответ...",
         "sending": "Отправка...",
         "send": "Отправить"
@@ -2333,138 +2375,97 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       "expand": "Развернуть список"
     }
   },
-  "coupon": {
-    "title": "Управление купонами",
-    "description": "Здесь вы можете управлять купонами на скидку, включая их добавление, просмотр и удаление.",
+  "payment": {
+    "title": "Способы оплаты",
+    "description": "Настройка способов оплаты, включая Alipay, WeChat Pay и др.",
     "table": {
       "columns": {
         "id": "ID",
-        "show": "Включен",
+        "enable": "Включено",
         "name": "Название",
-        "type": "Тип",
-        "code": "Код",
-        "limitUse": "Осталось исп.",
-        "limitUseWithUser": "Исп. на чел.",
-        "validity": "Срок действия",
+        "payment": "Шлюз",
+        "notify_url": "URL уведомления",
+        "notify_url_tooltip": "Шлюз будет отправлять уведомления на этот адрес. Убедитесь, что он доступен через ваш брандмауэр.",
         "actions": "Действия"
-      },
-      "validity": {
-        "expired": "Истек {{days}} дн. назад",
-        "notStarted": "Начнется через {{days}} дн.",
-        "remaining": "Осталось {{days}} дн.",
-        "startTime": "Начало",
-        "endTime": "Конец",
-        "unlimited": "Бессрочно",
-        "noLimit": "Без лимита"
       },
       "actions": {
         "edit": "Изменить",
-        "delete": "Удалить",
-        "deleteConfirm": {
+        "delete": {
           "title": "Подтверждение удаления",
-          "description": "Это действие навсегда удалит этот купон. Вы уверены, что хотите продолжить?",
-          "confirmText": "Удалить"
+          "description": "Вы уверены, что хотите удалить этот способ оплаты? Это действие нельзя отменить.",
+          "success": "Успешно удалено"
         }
       },
       "toolbar": {
-        "search": "Поиск купонов...",
-        "type": "Тип",
+        "search": "Поиск способов оплаты...",
         "reset": "Сбросить",
-        "types": {
-          "1": "Фиксированная сумма",
-          "2": "Процент"
+        "sort": {
+          "hint": "Перетаскивайте для сортировки, затем нажмите сохранить",
+          "save": "Сохранить порядок",
+          "edit": "Изменить порядок"
         }
       }
     },
     "form": {
-      "add": "Добавить купон",
-      "edit": "Изменить купон",
-      "name": {
-        "label": "Название купона",
-        "placeholder": "Введите название купона",
-        "required": "Пожалуйста, введите название купона"
+      "add": {
+        "button": "Добавить способ оплаты",
+        "title": "Добавить способ оплаты"
       },
-      "type": {
-        "label": "Тип и значение купона",
-        "placeholder": "Выберите тип купона"
+      "edit": {
+        "title": "Изменить способ оплаты"
       },
-      "value": {
-        "placeholder": "Введите значение"
-      },
-      "validity": {
-        "label": "Срок действия",
-        "to": "до",
-        "endTimeError": "Время окончания должно быть позже времени начала"
-      },
-      "limitUse": {
-        "label": "Максимальное количество использований",
-        "placeholder": "Оставьте пустым для неограниченного использования",
-        "description": "Установите общее количество раз, которое этот купон может быть использован"
-      },
-      "limitUseWithUser": {
-        "label": "Лимит на пользователя",
-        "placeholder": "Оставьте пустым для неограниченного использования",
-        "description": "Ограничьте, сколько раз каждый пользователь может использовать этот купон"
-      },
-      "limitPeriod": {
-        "label": "Периоды подписки",
-        "placeholder": "Ограничить конкретными периодами, оставьте пустым для всех",
-        "description": "Выберите периоды подписки, для которых применим этот купон",
-        "empty": "Периоды не найдены"
-      },
-      "limitPlan": {
-        "label": "Тарифные планы",
-        "placeholder": "Ограничить конкретными тарифами, оставьте пустым для всех",
-        "description": "Выберите тарифные планы, для которых применим этот купон, оставьте пустым для всех",
-        "empty": "Тарифы не найдены"
-      },
-      "code": {
-        "label": "Кастомный код купона",
-        "placeholder": "Оставьте пустым для автогенерации",
-        "description": "Вы можете задать свой код купона или оставить поле пустым"
-      },
-      "generateCount": {
-        "label": "Количество для генерации",
-        "placeholder": "Сколько купонов создать, оставьте пустым для одного",
-        "description": "Сгенерировать несколько кодов купонов за один раз"
-      },
-      "submit": {
-        "saving": "Сохранение...",
-        "save": "Сохранить"
-      },
-      "error": {
-        "saveFailed": "Не удалось сохранить купон"
-      },
-      "timeRange": {
-        "quickSet": "Быстрая установка",
-        "presets": {
-          "1week": "1 Неделя",
-          "2weeks": "2 Недели",
-          "1month": "1 Месяц",
-          "3months": "3 Месяца",
-          "6months": "6 Месяцев",
-          "1year": "1 Год"
+      "fields": {
+        "name": {
+          "label": "Отображаемое название",
+          "placeholder": "Введите название",
+          "description": "Используется для отображения пользователям"
+        },
+        "icon": {
+          "label": "URL иконки",
+          "placeholder": "https://example.com/icon.svg",
+          "description": "URL иконки для отображения"
+        },
+        "notify_domain": {
+          "label": "Домен уведомлений",
+          "placeholder": "https://example.com",
+          "description": "Домен для получения уведомлений от шлюза"
+        },
+        "handling_fee_percent": {
+          "label": "Комиссия (%)",
+          "placeholder": "0-100"
+        },
+        "handling_fee_fixed": {
+          "label": "Фиксированная комиссия",
+          "placeholder": "0"
+        },
+        "payment": {
+          "label": "Платежный шлюз",
+          "placeholder": "Выберите шлюз",
+          "description": "Выберите технический шлюз для обработки оплаты"
         }
+      },
+      "validation": {
+        "name": {
+          "min": "Название должно содержать минимум 2 символа",
+          "max": "Название не может превышать 30 символов"
+        },
+        "notify_domain": {
+          "url": "Пожалуйста, введите корректный URL"
+        },
+        "payment": {
+          "required": "Пожалуйста, выберите платежный шлюз"
+        }
+      },
+      "buttons": {
+        "cancel": "Отмена",
+        "submit": "Отправить"
+      },
+      "sections": {
+        "payment_config": "Конфигурация шлюза"
+      },
+      "messages": {
+        "success": "Успешно сохранено"
       }
-    },
-    "period": {
-      "monthly": "Ежемесячно",
-      "quarterly": "Ежеквартально",
-      "half_yearly": "Раз в полгода",
-      "yearly": "Ежегодно",
-      "two_yearly": "Раз в 2 года",
-      "three_yearly": "Раз в 3 года",
-      "onetime": "Единоразово",
-      "reset_traffic": "Сброс трафика"
-    }
-  },
-  "search": {
-    "placeholder": "Поиск меню и функций...",
-    "title": "Навигация по меню",
-    "noResults": "Результатов не найдено",
-    "shortcut": {
-      "label": "Поиск",
-      "key": "⌘K"
     }
   },
   "subscribe": {
@@ -2614,503 +2615,725 @@ window.XBOARD_TRANSLATIONS['ru-RU'] = {
       }
     }
   },
-  "theme": {
-    "title": "Конфигурация тем",
-    "description": "Конфигурация тем, включая цвета, размеры шрифтов и т.д. Если вы развернули Xboard с раздельным фронтендом и бэкендом, конфигурация тем не вступит в силу.",
-    "upload": {
-      "button": "Загрузить тему",
-      "title": "Загрузить тему",
-      "description": "Пожалуйста, загрузите корректный пакет темы (формат .zip). Пакет должен содержать полную структуру файлов темы.",
-      "dragText": "Перетащите файл темы сюда или",
-      "clickText": "нажмите для выбора",
-      "supportText": "Поддерживаются пакеты тем в формате .zip",
-      "uploading": "Загрузка...",
-      "error": {
-        "format": "Поддерживаются только файлы тем в формате ZIP"
+  "user": {
+    "manage": {
+      "title": "Управление пользователями",
+      "description": "Здесь вы можете управлять пользователями, включая добавление, удаление, редактирование и поиск."
+    },
+    "columns": {
+      "is_admin": "Админ",
+      "is_staff": "Персонал",
+      "id": "ID",
+      "email": "Email",
+      "online_count": "Устройства онлайн",
+      "status": "Статус",
+      "subscription": "Подписка",
+      "group": "Группа",
+      "used_traffic": "Использовано",
+      "total_traffic": "Всего трафика",
+      "expire_time": "Срок действия",
+      "balance": "Баланс",
+      "commission": "Комиссия",
+      "register_time": "Дата регистрации",
+      "actions": "Действия",
+      "next_reset_at": "След. сброс",
+      "device_limit": {
+        "unlimited": "Без лимита устройств",
+        "limited": "Максимум {{count}} устройств"
+      },
+      "status_text": {
+        "normal": "Нормальный",
+        "banned": "Забанен"
+      },
+      "online_status": {
+        "online": "В сети",
+        "never": "Никогда не был в сети",
+        "last_online": "Был в сети: {{time}}",
+        "offline_duration": {
+          "days": "Не в сети: {{count}}д",
+          "hours": "Не в сети: {{count}}ч",
+          "minutes": "Не в сети: {{count}}м",
+          "seconds": "Не в сети: {{count}}с"
+        }
+      },
+      "expire_status": {
+        "permanent": "Бессрочно",
+        "expired": "Истекло {{days}} дн. назад",
+        "remaining": "Осталось {{days}} дн."
+      },
+      "actions_menu": {
+        "edit": "Редактировать",
+        "view_details": "Просмотреть детали",
+        "assign_order": "Назначить заказ",
+        "copy_url": "Копировать ссылку подписки",
+        "reset_secret": "Сбросить UUID и URL",
+        "orders": "Заказы",
+        "invites": "Приглашения",
+        "traffic_records": "Записи трафика",
+        "reset_traffic": "Сбросить трафик",
+        "delete": "Удалить",
+        "delete_confirm_title": "Подтверждение удаления пользователя",
+        "delete_confirm_description": "Это действие навсегда удалит пользователя {{email}} и все связанные данные, включая заказы, купоны, записи трафика и тикеты. Это действие нельзя отменить. Продолжить?"
       }
     },
-    "preview": {
-      "title": "Предпросмотр темы",
-      "imageCount": "{{current}} / {{total}}"
+    "filter": {
+      "selected": "Выбрано {{count}}",
+      "no_results": "Результатов не найдено.",
+      "clear": "Очистить фильтры",
+      "search_placeholder": "Поиск...",
+      "email_search": "Поиск по email...",
+      "advanced": "Расширенный фильтр",
+      "reset": "Сбросить фильтр",
+      "sheet": {
+        "title": "Расширенный фильтр",
+        "description": "Добавьте одно или несколько условий для точного поиска пользователей",
+        "conditions": "Условия фильтрации",
+        "add": "Добавить условие",
+        "condition": "Условие {{number}}",
+        "field": "Выберите поле",
+        "operator": "Выберите оператор",
+        "value": "Введите значение",
+        "value_number": "Введите значение ({{unit}})",
+        "reset": "Сброс",
+        "apply": "Применить фильтр"
+      },
+      "fields": {
+        "email": "Email",
+        "id": "ID пользователя",
+        "plan_id": "Подписка",
+        "transfer_enable": "Трафик",
+        "total_used": "Использовано",
+        "online_count": "Устройства онлайн",
+        "expired_at": "Срок действия",
+        "uuid": "UUID",
+        "token": "Токен",
+        "banned": "Статус аккаунта",
+        "remark": "Примечание",
+        "inviter_email": "Email пригласителя",
+        "invite_user_id": "ID пригласителя",
+        "is_admin": "Админ",
+        "is_staff": "Персонал"
+      },
+      "operators": {
+        "contains": "Содержит",
+        "eq": "Равно",
+        "gt": "Больше",
+        "lt": "Меньше"
+      },
+      "status": {
+        "normal": "Нормальный",
+        "banned": "Забанен"
+      },
+      "boolean": {
+        "true": "Да",
+        "false": "Нет"
+      }
     },
-    "card": {
-      "version": "Версия: {{version}}",
-      "currentTheme": "Текущая тема",
-      "activateTheme": "Активировать тему",
-      "configureTheme": "Настройки темы",
-      "preview": "Предпросмотр",
-      "delete": {
-        "title": "Удалить тему",
-        "description": "Вы уверены, что хотите удалить эту тему? Это действие нельзя отменить.",
-        "button": "Удалить",
-        "error": {
-          "active": "Нельзя удалить активную тему"
+    "generate": {
+      "button": "Создать пользователя",
+      "title": "Создание пользователя",
+      "form": {
+        "email": "Email",
+        "email_prefix": "Префикс аккаунта (оставьте пустым для пакетной генерации)",
+        "email_domain": "Домен",
+        "password": "Пароль",
+        "password_placeholder": "Оставьте пустым, чтобы использовать email в качестве пароля",
+        "expire_time": "Срок действия",
+        "expire_time_placeholder": "Выберите срок действия, оставьте пустым для бессрочного",
+        "permanent": "Бессрочно",
+        "subscription": "Тарифный план",
+        "subscription_none": "Нет",
+        "generate_count": "Количество для генерации",
+        "generate_count_placeholder": "Введите количество для пакетной генерации",
+        "cancel": "Отмена",
+        "submit": "Создать",
+        "success": "Пользователи созданы",
+        "download_csv": "Скачать как CSV"
+      }
+    },
+    "edit": {
+      "button": "Редактировать пользователя",
+      "title": "Управление пользователем",
+      "form": {
+        "email": "Email",
+        "email_placeholder": "Пожалуйста, введите email",
+        "inviter_email": "Email пригласителя",
+        "inviter_email_placeholder": "Пожалуйста, введите email",
+        "password": "Пароль",
+        "password_placeholder": "Введите новый пароль, если хотите изменить его",
+        "balance": "Баланс",
+        "balance_placeholder": "Пожалуйста, введите баланс",
+        "commission_balance": "Баланс комиссии",
+        "commission_balance_placeholder": "Пожалуйста, введите баланс комиссии",
+        "upload": "Трафик (загрузка)",
+        "upload_placeholder": "Введите трафик загрузки",
+        "download": "Трафик (скачивание)",
+        "download_placeholder": "Введите трафик скачивания",
+        "total_traffic": "Общий трафик",
+        "total_traffic_placeholder": "Пожалуйста, введите трафик",
+        "expire_time": "Срок действия",
+        "expire_time_placeholder": "Выберите дату, оставьте пустым для бессрочного",
+        "expire_time_specific": "Конкретное время",
+        "expire_time_today": "До конца сегодня",
+        "expire_time_permanent": "Бессрочно",
+        "expire_time_1month": "Один месяц",
+        "expire_time_3months": "Три месяца",
+        "expire_time_confirm": "Подтвердить",
+        "subscription": "Тарифный план",
+        "subscription_none": "Нет",
+        "account_status": "Статус аккаунта",
+        "commission_type": "Тип комиссии",
+        "commission_type_system": "По системным настройкам",
+        "commission_type_cycle": "Циклическая комиссия",
+        "commission_type_onetime": "Единоразовая комиссия",
+        "commission_rate": "Ставка комиссии",
+        "commission_rate_placeholder": "Оставьте пустым для системной ставки",
+        "discount": "Эксклюзивная скидка",
+        "discount_placeholder": "Оставьте пустым, если нет скидки",
+        "speed_limit": "Лимит скорости",
+        "speed_limit_placeholder": "Оставьте пустым для безлимита",
+        "device_limit": "Лимит устройств",
+        "device_limit_placeholder": "Оставьте пустым для безлимита",
+        "is_admin": "Админ",
+        "is_staff": "Персонал",
+        "remarks": "Примечания",
+        "remarks_placeholder": "Введите примечания здесь",
+        "cancel": "Отмена",
+        "submit": "Отправить",
+        "success": "Изменено успешно"
+      }
+    },
+    "actions": {
+      "title": "Действия",
+      "send_email": "Отправить Email",
+      "export_csv": "Экспорт в CSV",
+      "traffic_reset_stats": "Статистика сброса трафика",
+      "batch_ban": "Пакетный бан",
+      "confirm_ban": {
+        "title": "Подтверждение пакетного бана",
+        "filtered_description": "Это действие забанит всех пользователей, соответствующих вашим текущим фильтрам. Это нельзя отменить.",
+        "all_description": "Это действие забанит всех пользователей в системе. Это нельзя отменить.",
+        "cancel": "Отмена",
+        "confirm": "Подтвердить бан",
+        "banning": "Баню..."
+      }
+    },
+    "messages": {
+      "success": "Успех",
+      "error": "Ошибка",
+      "export": {
+        "success": "Экспорт выполнен",
+        "failed": "Ошибка экспорта"
+      },
+      "batch_ban": {
+        "success": "Пакетный бан выполнен",
+        "failed": "Ошибка пакетного бана"
+      },
+      "send_mail": {
+        "success": "Email отправлен",
+        "failed": "Ошибка отправки email",
+        "required_fields": "Пожалуйста, заполните обязательные поля"
+      }
+    },
+    "traffic_reset": {
+      "title": "Сброс трафика",
+      "description": "Сбросить трафик для пользователя {{email}}",
+      "tabs": {
+        "reset": "Сбросить трафик",
+        "history": "История сбросов"
+      },
+      "user_info": "Информация о пользователе",
+      "warning": {
+        "title": "Важное уведомление",
+        "irreversible": "Операция сброса трафика необратима, пожалуйста, будьте осторожны",
+        "reset_to_zero": "После сброса трафик загрузки и скачивания пользователя будет обнулен",
+        "logged": "Все операции сброса записываются в системные логи"
+      },
+      "reason": {
+        "label": "Причина сброса",
+        "placeholder": "Введите причину сброса (опционально)",
+        "optional": "Это поле не обязательно и используется для записи причины сброса"
+      },
+      "confirm_reset": "Подтвердить сброс",
+      "resetting": "Сбрасываю...",
+      "reset_success": "Трафик сброшен успешно",
+      "reset_failed": "Ошибка при сбросе трафика",
+      "history": {
+        "summary": "Обзор сбросов",
+        "reset_count": "Количество сбросов",
+        "last_reset": "Последний сброс",
+        "next_reset": "Следующий сброс",
+        "never": "Никогда не сбрасывался",
+        "no_schedule": "Сброс не запланирован",
+        "records": "Записи о сбросе",
+        "recent_records": "Последние 10 записей",
+        "no_records": "Записей о сбросе нет",
+        "reset_time": "Время сброса",
+        "traffic_cleared": "Трафик обнулен"
+      },
+      "stats": {
+        "title": "Статистика сброса трафика",
+        "description": "Просмотр системной статистики сброса трафика",
+        "time_range": "Временной диапазон",
+        "total_resets": "Всего сбросов",
+        "auto_resets": "Автоматические",
+        "manual_resets": "Ручные",
+        "cron_resets": "По расписанию/Cron",
+        "in_period": "За последние {{days}} дн.",
+        "breakdown": "Разбивка по типам",
+        "breakdown_description": "Процентное соотношение различных типов операций сброса",
+        "auto_percentage": "Доля автосбросов",
+        "manual_percentage": "Доля ручных сбросов",
+        "cron_percentage": "Доля сбросов по Cron",
+        "days_options": {
+          "week": "За неделю",
+          "month": "За месяц",
+          "quarter": "За квартал",
+          "year": "За год"
         }
       }
     },
-    "config": {
-      "title": "Настройка темы {{name}}",
-      "description": "Изменение стилей темы, макетов и других параметров отображения.",
-      "cancel": "Отмена",
-      "save": "Сохранить",
-      "success": "Настройки успешно сохранены"
-    }
-  },
-  "auth": {
-    "signIn": {
-      "title": "Вход",
-      "description": "Введите свой email и пароль для входа",
-      "email": "Email",
-      "emailPlaceholder": "name@example.com",
-      "password": "Пароль",
-      "passwordPlaceholder": "Введите ваш пароль",
-      "forgotPassword": "Забыли пароль?",
-      "submit": "Войти",
-      "rememberMe": "Запомнить меня",
-      "resetPassword": {
-        "title": "Сброс пароля",
-        "description": "Выполните следующую команду в директории сайта, чтобы сбросить пароль",
-        "command": "php artisan reset:password admin-email"
+    "traffic_reset_logs": {
+      "title": "Логи сброса трафика",
+      "description": "Просмотр подробных записей всех операций сброса трафика в системе",
+      "columns": {
+        "id": "ID лога",
+        "user": "Пользователь",
+        "reset_type": "Тип сброса",
+        "trigger_source": "Источник",
+        "cleared_traffic": "Обнуленный трафик",
+        "cleared": "Обнулено",
+        "upload": "Загрузка",
+        "download": "Скачивание",
+        "reset_time": "Время сброса",
+        "log_time": "Время записи"
       },
-      "validation": {
-        "emailRequired": "Пожалуйста, введите адрес электронной почты",
-        "emailInvalid": "Пожалуйста, введите корректный адрес электронной почты",
-        "passwordRequired": "Пожалуйста, введите пароль",
-        "passwordLength": "Пароль должен содержать не менее 7 символов"
-      }
-    }
-  },
-  "dashboard": {
-    "title": "Панель управления",
-    "stats": {
-      "newUsers": "Новые пользователи",
-      "totalScore": "Общий балл",
-      "monthlyUpload": "Загружено за месяц",
-      "vsLastMonth": "к прошлому месяцу",
-      "vsYesterday": "со вчера",
-      "todayIncome": "Доход за сегодня",
-      "monthlyIncome": "Доход за месяц",
-      "totalIncome": "Общий доход",
-      "totalUsers": "Всего пользователей",
-      "activeUsers": "Активных: {{count}}",
-      "totalOrders": "Всего заказов",
-      "revenue": "Выручка",
-      "todayRegistered": "Зарегистрировано сегодня",
-      "monthlyRegistered": "Зарегистрировано за месяц",
-      "onlineUsers": "Онлайн",
-      "pendingTickets": "Открытых тикетов",
-      "hasPendingTickets": "Есть тикеты, требующие ответа",
-      "noPendingTickets": "Нет открытых тикетов",
-      "pendingCommission": "Комиссии на выплату",
-      "hasPendingCommission": "Есть комиссии, требующие подтверждения",
-      "noPendingCommission": "Нет комиссий на выплату",
-      "monthlyNewUsers": "Новых за месяц",
-      "monthlyDownload": "Скачано за месяц",
-      "todayTraffic": "Сегодня: {{value}}",
-      "activeUserTrend": "Тренды активности",
-      "realtimeUsers": "Пользователи в реальном времени",
-      "todayPeak": "Пик за сегодня",
-      "vsLastWeek": "к прошлой неделе"
-    },
-    "trafficRank": {
-      "nodeTrafficRank": "Рейтинг узлов",
-      "userTrafficRank": "Рейтинг пользователей",
-      "today": "Сегодня",
-      "last7days": "7 дней",
-      "last30days": "30 дней",
-      "customRange": "Свой диапазон",
-      "selectTimeRange": "Выбрать период",
-      "selectDateRange": "Выбрать даты",
-      "currentTraffic": "Трафик за период",
-      "previousTraffic": "Трафик ранее",
-      "changeRate": "Изменение",
-      "recordTime": "Время записи"
-    },
-    "overview": {
-      "title": "Обзор доходов",
-      "thisMonth": "Этот месяц",
-      "lastMonth": "Прошлый месяц",
-      "to": "по",
-      "selectTimeRange": "Выбрать диапазон",
-      "selectDate": "Выбрать дату",
-      "last7Days": "7 дней",
-      "last30Days": "30 дней",
-      "last90Days": "90 дней",
-      "last180Days": "180 дней",
-      "lastYear": "Год",
-      "customRange": "Свой диапазон",
-      "amount": "Сумма",
-      "count": "Количество",
-      "transactions": "Транзакций: {{count}}",
-      "orderAmount": "Сумма заказов",
-      "commissionAmount": "Сумма комиссий",
-      "orderCount": "Заказов",
-      "commissionCount": "Комиссий",
-      "totalIncome": "Прибыль",
-      "totalCommission": "Всего комиссий",
-      "totalTransactions": "Транзакций: {{count}}",
-      "avgOrderAmount": "Средний чек:",
-      "commissionRate": "Доля комиссий:"
-    },
-    "traffic": {
-      "title": "Рейтинг трафика",
-      "rank": "Место",
-      "domain": "Домен",
-      "todayTraffic": "Трафик сегодня",
-      "monthlyTraffic": "Трафик за месяц"
-    },
-    "queue": {
-      "title": "Очереди",
-      "jobDetails": "Детали задачи",
-      "status": {
-        "description": "Текущий статус выполнения очередей",
-        "running": "Статус",
-        "normal": "Норма",
-        "abnormal": "Ошибка",
-        "waitTime": "Ожидание: {{seconds}} сек.",
-        "pending": "В очереди",
-        "processing": "В процессе",
-        "completed": "Завершено",
-        "failed": "Ошибка",
-        "cancelled": "Отменено"
-      },
-      "details": {
-        "description": "Технические детали очередей",
-        "recentJobs": "Последние задачи",
-        "statisticsPeriod": "Период статистики: {{hours}} ч.",
-        "jobsPerMinute": "Задач в минуту",
-        "maxThroughput": "Пиковая нагрузка: {{value}}",
-        "failedJobs7Days": "Ошибки (7 дней)",
-        "retentionPeriod": "Период хранения: {{hours}} ч.",
-        "longestRunningQueue": "Самая длинная очередь",
-        "activeProcesses": "Активные процессы",
-        "id": "ID задачи",
-        "type": "Тип задачи",
-        "status": "Статус",
-        "progress": "Прогресс",
-        "createdAt": "Создано",
-        "updatedAt": "Обновлено",
-        "error": "Ошибка",
-        "data": "Данные задачи",
-        "result": "Результат",
-        "duration": "Длительность",
-        "attempts": "Попыток",
-        "nextRetry": "Минут до повтора",
-        "failedJobsDetailTitle": "Ошибки очередей",
-        "viewFailedJobs": "Ошибки",
-        "jobDetailTitle": "Детали выполнения",
-        "time": "Время",
-        "queue": "Очередь",
-        "name": "Имя задачи",
-        "exception": "Исключение",
-        "noFailedJobs": "Ошибок не найдено",
-        "connection": "Соединение",
-        "payload": "Payload",
-        "viewDetail": "Детали",
-        "action": "Действие"
+      "filters": {
+        "search_user": "Поиск по email...",
+        "reset_type": "Тип сброса",
+        "trigger_source": "Источник",
+        "all_types": "Все типы",
+        "all_sources": "Все источники",
+        "start_date": "Дата начала",
+        "end_date": "Дата окончания",
+        "apply_date": "Применить фильтр",
+        "reset": "Сбросить фильтр",
+        "filter_title": "Параметры фильтрации",
+        "filter_description": "Установите условия для поиска записей о сбросе трафика",
+        "reset_types": {
+          "monthly": "Ежемесячно",
+          "first_day_month": "Первое число месяца",
+          "yearly": "Ежегодно",
+          "first_day_year": "Первое число года",
+          "manual": "Вручную"
+        },
+        "trigger_sources": {
+          "auto": "Автоматически",
+          "manual": "Вручную",
+          "cron": "По расписанию/Cron"
+        }
       },
       "actions": {
-        "retry": "Повтор",
-        "cancel": "Отмена",
-        "delete": "Удалить",
-        "viewDetails": "Подробнее"
+        "export": "Экспорт логов",
+        "exporting": "Экспортирую...",
+        "export_success": "Экспорт выполнен успешно",
+        "export_failed": "Ошибка экспорта"
       },
-      "empty": "Задач не найдено",
-      "loading": "Загрузка статуса очередей...",
-      "error": "Ошибка загрузки статуса"
+      "trigger_descriptions": {
+        "manual": "Сброс трафика выполнен администратором вручную",
+        "cron": "Сброс выполнен автоматически системной задачей (Cron)",
+        "auto": "Автоматический сброс при выполнении условий системы",
+        "other": "Сброс выполнен другим способом"
+      }
     },
-    "common": {
-      "refresh": "Обновить",
-      "close": "Закрыть",
-      "pagination": "Страница {{current}}/{{total}}, всего {{count}}"
+    "send_mail": {
+      "title": "Отправить Email",
+      "description": "Отправить сообщение выбранным или отфильтрованным пользователям",
+      "subject": "Тема",
+      "content": "Содержимое",
+      "sending": "Отправка...",
+      "send": "Отправить"
     },
-    "search": {
-      "placeholder": "Поиск меню и функций...",
-      "title": "Навигация",
-      "noResults": "Ничего не найдено",
-      "loading": "Поиск..."
+    "dialog": {
+      "title": "Детали пользователя",
+      "basicInfo": "Основная информация",
+      "subscriptionInfo": "Информация о подписке",
+      "trafficInfo": "Информация о трафике",
+      "financialInfo": "Финансовая информация",
+      "activityInfo": "Активность",
+      "inviteInfo": "Реферальная информация",
+      "timeInfo": "Временные метки",
+      "subscriptionUrl": "Ссылка подписки",
+      "fields": {
+        "userId": "ID пользователя",
+        "email": "Email",
+        "uuid": "UUID",
+        "token": "Токен",
+        "remarks": "Примечания",
+        "subscriptionPlan": "Тариф",
+        "permissionGroup": "Группы доступа",
+        "expiredAt": "Истекает",
+        "deviceLimit": "Лимит устройств",
+        "speedLimit": "Лимит скорости",
+        "transferEnable": "Всего трафика",
+        "uploadUsed": "Использовано (Up)",
+        "downloadUsed": "Использовано (Down)",
+        "totalUsed": "Всего использовано",
+        "lastResetAt": "Последний сброс",
+        "nextResetAt": "Следующий сброс",
+        "resetCount": "Кол-во сбросов",
+        "balance": "Баланс",
+        "commissionBalance": "Баланс комиссии",
+        "commissionType": "Тип комиссии",
+        "commissionRate": "Ставка комиссии",
+        "lastLoginAt": "Последний вход",
+        "lastLoginIp": "IP последнего входа",
+        "lastOnlineAt": "Последний раз онлайн",
+        "onlineCount": "Устройства онлайн",
+        "inviteUser": "Пригласитель",
+        "inviteUserId": "ID пригласителя",
+        "createdAt": "Дата создания",
+        "updatedAt": "Дата обновления",
+        "subscribeUrl": "Ссылка подписки",
+        "telegramId": "Telegram ID"
+      }
+    },
+    "status": {
+      "normal": "Нормальный",
+      "banned": "Забанен",
+      "admin": "Админ",
+      "staff": "Персонал"
     }
   },
-  "payment": {
-    "title": "Способы оплаты",
-    "description": "Настройка способов оплаты, включая Alipay, WeChat Pay и др.",
-    "table": {
-      "columns": {
-        "id": "ID",
-        "enable": "Включено",
-        "name": "Название",
-        "payment": "Шлюз",
-        "notify_url": "URL уведомления",
-        "notify_url_tooltip": "Шлюз будет отправлять уведомления на этот адрес. Убедитесь, что он доступен через ваш брандмауэр.",
-        "actions": "Действия"
+  "giftCard": {
+    "title": "Управление подарочными картами",
+    "description": "Управление шаблонами подарочных карт, кодами активации и записями об использовании.",
+    "tabs": {
+      "templates": "Управление шаблонами",
+      "codes": "Коды активации",
+      "usages": "История использования",
+      "statistics": "Статистика"
+    },
+    "template": {
+      "title": "Управление шаблонами",
+      "description": "Создание, редактирование и удаление шаблонов подарочных карт.",
+      "table": {
+        "title": "Список шаблонов",
+        "columns": {
+          "id": "ID",
+          "name": "Название",
+          "type": "Тип",
+          "status": "Статус",
+          "sort": "Сортировка",
+          "rewards": "Награды",
+          "created_at": "Дата создания",
+          "actions": "Действия",
+          "no_rewards": "Нет наград"
+        }
+      },
+      "form": {
+        "add": "Добавить шаблон",
+        "edit": "Изменить шаблон",
+        "name": {
+          "label": "Название шаблона",
+          "placeholder": "Введите название шаблона",
+          "required": "Пожалуйста, введите название шаблона"
+        },
+        "sort": {
+          "label": "Сортировка",
+          "placeholder": "Меньшие числа отображаются первыми"
+        },
+        "type": {
+          "label": "Тип",
+          "placeholder": "Выберите тип карты"
+        },
+        "description": {
+          "label": "Описание",
+          "placeholder": "Введите описание подарочной карты"
+        },
+        "status": {
+          "label": "Статус",
+          "description": "Если отключено, этот шаблон нельзя использовать для создания или активации новых карт."
+        },
+        "display": {
+          "title": "Визуальные эффекты"
+        },
+        "theme_color": {
+          "label": "Цвет темы"
+        },
+        "icon": {
+          "label": "Иконка",
+          "placeholder": "Введите URL иконки"
+        },
+        "background_image": {
+          "label": "Фоновое изображение",
+          "placeholder": "Введите URL фонового изображения"
+        },
+        "conditions": {
+          "title": "Условия использования",
+          "new_user_max_days": {
+            "label": "Лимит дней регистрации нового пользователя",
+            "placeholder": "Пример: 7 (Только для пользователей, зарегистрированных в течение 7 дней)"
+          },
+          "new_user_only": {
+            "label": "Только для новых пользователей"
+          },
+          "paid_user_only": {
+            "label": "Только для платных пользователей"
+          },
+          "require_invite": {
+            "label": "Требуется наличие пригласителя"
+          },
+          "allowed_plans": {
+            "label": "Разрешенные тарифы",
+            "placeholder": "Выберите тарифы, доступные для активации (оставьте пустым для всех)"
+          },
+          "disallowed_plans": {
+            "label": "Запрещенные тарифы",
+            "placeholder": "Выберите тарифы, для которых активация запрещена"
+          }
+        },
+        "limits": {
+          "title": "Ограничения",
+          "max_use_per_user": {
+            "label": "Макс. использований на пользователя",
+            "placeholder": "Оставьте пустым для безлимита"
+          },
+          "cooldown_hours": {
+            "label": "Кулдаун (часы) для однотипных карт",
+            "placeholder": "Оставьте пустым для безлимита"
+          },
+          "invite_reward_rate": {
+            "label": "Доля вознаграждения пригласителя",
+            "placeholder": "Пример: 0.2 (означает 20%)",
+            "description": "Если у пользователя есть пригласитель, его бонус = бонус пользователя × эта доля"
+          }
+        },
+        "rewards": {
+          "title": "Награды",
+          "balance": {
+            "label": "Бонусный баланс (Валюта)",
+            "short_label": "Баланс",
+            "placeholder": "Введите сумму вознаграждения"
+          },
+          "transfer_enable": {
+            "label": "Бонусный трафик (ГБ)",
+            "short_label": "Трафик",
+            "placeholder": "Введите объем трафика (ГБ)"
+          },
+          "expire_days": {
+            "label": "Продление срока (дней)",
+            "short_label": "Срок",
+            "placeholder": "Введите количество дней"
+          },
+          "transfer": {
+            "label": "Бонусный трафик (Байты)",
+            "placeholder": "Введите объем трафика (байты)"
+          },
+          "days": {
+            "label": "Продление срока (дней)",
+            "placeholder": "Введите количество дней"
+          },
+          "device_limit": {
+            "label": "Увеличить лимит устройств",
+            "short_label": "Устройства",
+            "placeholder": "Введите количество дополнительных устройств"
+          },
+          "reset_package": {
+            "label": "Сбросить месячный трафик",
+            "description": "Если включено, активация очистит использованный трафик текущего тарифа пользователя."
+          },
+          "reset_count": {
+            "description": "Этот тип карты сбрасывает использование месячного трафика пользователя."
+          },
+          "task_card": {
+            "description": "Награды для бонусных карт за задания настраиваются в системе заданий."
+          },
+          "plan_id": {
+            "label": "Указанный тариф",
+            "short_label": "Тариф",
+            "placeholder": "Пожалуйста, выберите тариф"
+          },
+          "plan_validity_days": {
+            "label": "Срок действия тарифа (дней)",
+            "short_label": "Срок тарифа",
+            "placeholder": "Оставьте пустым для срока по умолчанию"
+          },
+          "random_rewards": {
+            "label": "Пул случайных наград",
+            "add": "Добавить случайную награду",
+            "weight": "Вес"
+          }
+        },
+        "special_config": {
+          "title": "Специальная конфигурация",
+          "start_time": {
+            "label": "Время начала события",
+            "placeholder": "Выберите дату начала"
+          },
+          "end_time": {
+            "label": "Время окончания события",
+            "placeholder": "Выберите дату окончания"
+          },
+          "festival_bonus": {
+            "label": "Множитель праздничной награды",
+            "placeholder": "Пример: 1.5 (означает 1.5x)"
+          }
+        },
+        "submit": {
+          "saving": "Сохранение...",
+          "save": "Сохранить"
+        }
       },
       "actions": {
         "edit": "Изменить",
-        "delete": {
+        "delete": "Удалить",
+        "deleteConfirm": {
           "title": "Подтверждение удаления",
-          "description": "Вы уверены, что хотите удалить этот способ оплаты? Это действие нельзя отменить.",
-          "success": "Успешно удалено"
-        }
-      },
-      "toolbar": {
-        "search": "Поиск способов оплаты...",
-        "reset": "Сбросить",
-        "sort": {
-          "hint": "Перетаскивайте для сортировки, затем нажмите сохранить",
-          "save": "Сохранить порядок",
-          "edit": "Изменить порядок"
+          "description": "Это действие навсегда удалит этот шаблон. Вы уверены, что хотите продолжить?",
+          "confirmText": "Удалить"
         }
       }
     },
-    "form": {
-      "add": {
-        "button": "Добавить способ оплаты",
-        "title": "Добавить способ оплаты"
-      },
-      "edit": {
-        "title": "Изменить способ оплаты"
-      },
-      "fields": {
-        "name": {
-          "label": "Отображаемое название",
-          "placeholder": "Введите название",
-          "description": "Используется для отображения пользователям"
+    "code": {
+      "title": "Управление кодами активации",
+      "form": {
+        "generate": "Сгенерировать коды активации",
+        "template_id": {
+          "label": "Выберите шаблон",
+          "placeholder": "Выберите шаблон для генерации кодов активации"
         },
-        "icon": {
-          "label": "URL иконки",
-          "placeholder": "https://example.com/icon.svg",
-          "description": "URL иконки для отображения"
+        "count": {
+          "label": "Количество кодов"
         },
-        "notify_domain": {
-          "label": "Домен уведомлений",
-          "placeholder": "https://example.com",
-          "description": "Домен для получения уведомлений от шлюза"
+        "prefix": {
+          "label": "Кастомный префикс (опционально)"
         },
-        "handling_fee_percent": {
-          "label": "Комиссия (%)",
-          "placeholder": "0-100"
+        "expires_hours": {
+          "label": "Срок действия (часов)"
         },
-        "handling_fee_fixed": {
-          "label": "Фиксированная комиссия",
-          "placeholder": "0"
+        "max_usage": {
+          "label": "Лимит использований кода"
         },
-        "payment": {
-          "label": "Платежный шлюз",
-          "placeholder": "Выберите шлюз",
-          "description": "Выберите технический шлюз для обработки оплаты"
+        "download_csv": "Экспорт в CSV",
+        "submit": {
+          "generating": "Генерация...",
+          "generate": "Сгенерировать сейчас"
         }
       },
-      "validation": {
-        "name": {
-          "min": "Название должно содержать минимум 2 символа",
-          "max": "Название не может превышать 30 символов"
-        },
-        "notify_domain": {
-          "url": "Пожалуйста, введите корректный URL"
-        },
-        "payment": {
-          "required": "Пожалуйста, выберите платежный шлюз"
+      "description": "Управление кодами активации: генерация, просмотр и экспорт.",
+      "table": {
+        "title": "Список кодов активации",
+        "columns": {
+          "id": "ID",
+          "code": "Код активации",
+          "template_name": "Название шаблона",
+          "status": "Статус",
+          "expires_at": "Истекает",
+          "usage_count": "Использовано",
+          "max_usage": "Доступно",
+          "created_at": "Дата создания"
         }
-      },
-      "buttons": {
-        "cancel": "Отмена",
-        "submit": "Отправить"
-      },
-      "sections": {
-        "payment_config": "Конфигурация шлюза"
-      },
-      "messages": {
-        "success": "Успешно сохранено"
-      }
-    }
-  },
-  "order": {
-    "title": "Управление заказами",
-    "description": "Здесь вы можете просматривать заказы пользователей, включая назначение, просмотр, удаление и другие операции.",
-    "table": {
-      "columns": {
-        "tradeNo": "№ Заказа",
-        "type": "Тип",
-        "plan": "Тарифный план",
-        "period": "Период",
-        "amount": "Сумма оплаты",
-        "status": "Статус заказа",
-        "commission": "Сумма комиссии",
-        "commissionStatus": "Статус комиссии",
-        "createdAt": "Создан"
-      }
-    },
-    "type": {
-      "NEW": "Новая покупка",
-      "RENEWAL": "Продление",
-      "UPGRADE": "Апгрейд (Переход)",
-      "RESET_FLOW": "Сброс трафика"
-    },
-    "period": {
-      "month_price": "Ежемесячно",
-      "quarter_price": "Ежеквартально",
-      "half_year_price": "Раз в полгода",
-      "year_price": "Ежегодно",
-      "two_year_price": "Раз в 2 года",
-      "three_year_price": "Раз в 3 года",
-      "onetime_price": "Единоразово",
-      "reset_price": "Пакет сброса"
-    },
-    "status": {
-      "PENDING": "Ожидание",
-      "PROCESSING": "В обработке",
-      "CANCELLED": "Отменен",
-      "COMPLETED": "Завершен",
-      "DISCOUNTED": "Скидка",
-      "tooltip": "После пометки [Оплачено] система выполнит активацию и завершит заказ"
-    },
-    "commission": {
-      "PENDING": "Ожидание",
-      "PROCESSING": "В обработке",
-      "VALID": "Действительна",
-      "INVALID": "Недействительна"
-    },
-    "actions": {
-      "markAsPaid": "Пометить как оплаченный",
-      "cancel": "Отменить заказ",
-      "openMenu": "Открыть меню",
-      "reset": "Сбросить"
-    },
-    "search": {
-      "placeholder": "Поиск заказов..."
-    },
-    "dialog": {
-      "title": "Информация о заказе",
-      "basicInfo": "Основная информация",
-      "amountInfo": "Информация о стоимости",
-      "timeInfo": "Временные метки",
-      "commissionInfo": "Информация о комиссии",
-      "commissionStatusActive": "Активна",
-      "addOrder": "Добавить заказ",
-      "assignOrder": "Назначить заказ",
-      "fields": {
-        "userEmail": "Email пользователя",
-        "orderPeriod": "Период заказа",
-        "subscriptionPlan": "Тарифный план",
-        "callbackNo": "№ Транзакции (Callback)",
-        "paymentAmount": "Сумма к оплате",
-        "balancePayment": "Оплата с баланса",
-        "discountAmount": "Сумма скидки",
-        "refundAmount": "Сумма возврата",
-        "deductionAmount": "Сумма вычета",
-        "createdAt": "Дата создания",
-        "updatedAt": "Дата обновления",
-        "commissionStatus": "Статус комиссии",
-        "commissionAmount": "Заработок комиссии",
-        "actualCommissionAmount": "Фактическая комиссия",
-        "inviteUser": "Пригласитель",
-        "inviteUserId": "ID пригласителя"
-      },
-      "placeholders": {
-        "email": "Введите email пользователя",
-        "plan": "Выберите тарифный план",
-        "period": "Выберите период подписки",
-        "amount": "Введите сумму оплаты"
       },
       "actions": {
-        "cancel": "Отмена",
-        "confirm": "Подтвердить"
+        "enable": "Включить",
+        "disable": "Отключить",
+        "export": "Экспорт",
+        "exportConfirm": {
+          "title": "Подтверждение экспорта",
+          "description": "Все коды из выбранной группы будут экспортированы в текстовый файл. Продолжить?",
+          "confirmText": "Экспорт"
+        }
       },
-      "messages": {
-        "addOrder": "Заказ успешно добавлен",
-        "addSuccess": "Успешно добавлено"
+      "status": {
+        "0": "Не использован",
+        "1": "Использован",
+        "2": "Отключен",
+        "3": "Истек"
+      }
+    },
+    "usage": {
+      "title": "История использования",
+      "description": "Просмотр записей об использовании подарочных карт.",
+      "table": {
+        "columns": {
+          "id": "ID",
+          "code": "Код активации",
+          "template_name": "Название шаблона",
+          "user_email": "Email пользователя",
+          "rewards_given": "Выданные награды",
+          "invite_rewards": "Бонус пригласителя",
+          "multiplier_applied": "Применен множитель",
+          "ip_address": "IP адрес",
+          "created_at": "Время использования",
+          "actions": "Действия"
+        }
+      },
+      "actions": {
+        "view": "Детали"
+      }
+    },
+    "statistics": {
+      "title": "Статистика",
+      "description": "Анализ использования подарочных карт.",
+      "total": {
+        "title": "Общая статистика",
+        "templates_count": "Всего шаблонов",
+        "active_templates_count": "Активных шаблонов",
+        "codes_count": "Всего кодов активации",
+        "used_codes_count": "Использовано кодов",
+        "usages_count": "Записей об активации"
+      },
+      "daily": {
+        "title": "Использование за день"
       }
     }
   },
-  "plugin": {
-    "title": "Управление плагинами",
-    "description": "Управление и настройка системных плагинов",
-    "search": {
-      "placeholder": "Поиск по названию или описанию..."
+  "knowledge": {
+    "title": "База знаний",
+    "description": "Здесь вы можете управлять статьями базы знаний, включая их добавление, удаление и редактирование.",
+    "columns": {
+      "id": "ID",
+      "status": "Статус",
+      "title": "Заголовок",
+      "category": "Категория",
+      "actions": "Действия"
     },
-    "type": {
-      "placeholder": "Выберите тип плагина",
-      "all": "Все типы"
+    "form": {
+      "add": "Добавить статью",
+      "edit": "Изменить статью",
+      "title": "Заголовок",
+      "titlePlaceholder": "Введите заголовок статьи",
+      "category": "Категория",
+      "categoryPlaceholder": "Введите категорию для автоматической группировки",
+      "language": "Язык",
+      "languagePlaceholder": "Выберите язык",
+      "content": "Содержимое",
+      "show": "Показывать",
+      "cancel": "Отмена",
+      "submit": "Отправить"
     },
-    "tabs": {
-      "all": "Все плагины",
-      "installed": "Установленные",
-      "available": "Доступные"
+    "languages": {
+      "en-US": "English",
+      "ja-JP": "日本語",
+      "ko-KR": "한국어",
+      "vi-VN": "Tiếng Việt",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文",
+      "ru-RU": "Русский"
     },
-    "status": {
-      "enabled": "Включено",
-      "disabled": "Отключено",
-      "not_installed": "Не установлено",
-      "protected": "Защищено",
-      "filter_placeholder": "Статус управления",
-      "all": "Все статусы",
-      "installed": "Установленные",
-      "available": "Доступные"
-    },
-    "button": {
-      "install": "Установить",
-      "upgrade": "Обновить",
-      "config": "Настроить",
-      "enable": "Включить",
-      "disable": "Отключить",
-      "uninstall": "Удалить",
-      "readme": "Документация"
-    },
-    "upload": {
-      "button": "Загрузить плагин",
-      "title": "Загрузить плагин",
-      "description": "Загрузите пакет плагина (.zip)",
-      "dragText": "Перетащите пакет плагина сюда или",
-      "clickText": "выберите файл",
-      "supportText": "Поддерживаются только .zip файлы",
-      "uploading": "Загрузка...",
-      "error": {
-        "format": "Поддерживаются только .zip файлы"
-      }
-    },
-    "delete": {
-      "title": "Удалить плагин",
-      "description": "Вы уверены, что хотите удалить этот плагин? Это действие нельзя отменить.",
-      "button": "Удалить"
-    },
-    "uninstall": {
-      "title": "Удалить плагин из системы",
-      "description": "Вы уверены, что хотите удалить этот плагин? Все данные плагина будут стерты.",
-      "button": "Удалить"
-    },
-    "upgrade": {
-      "title": "Обновить плагин",
-      "description": "Вы уверены, что хотите обновить этот плагин? Он будет временно недоступен в процессе.",
-      "button": "Обновить"
-    },
-    "config": {
-      "title": "Конфигурация",
-      "description": "Изменение настроек плагина",
-      "save": "Сохранить",
-      "cancel": "Отмена"
-    },
-    "readme": {
-      "title": "Документация плагина"
-    },
-    "author": "Автор",
     "messages": {
-      "installSuccess": "Плагин успешно установлен",
-      "installError": "Ошибка при установке плагина",
-      "upgradeSuccess": "Плагин успешно обновлен",
-      "upgradeError": "Ошибка при обновлении плагина",
-      "uninstallSuccess": "Плагин успешно удален",
-      "uninstallError": "Ошибка при удалении плагина",
-      "enableSuccess": "Плагин включен",
-      "enableError": "Ошибка включения плагина",
-      "disableSuccess": "Плагин отключен",
-      "disableError": "Ошибка отключения плагина",
-      "configLoadError": "Ошибка загрузки конфигурации плагина",
-      "configSaveSuccess": "Конфигурация сохранена",
-      "configSaveError": "Ошибка сохранения конфигурации",
-      "uploadSuccess": "Плагин загружен",
-      "uploadError": "Ошибка загрузки плагина",
-      "deleteSuccess": "Плагин удален",
-      "deleteError": "Ошибка удаления плагина"
+      "deleteConfirm": "Подтверждение удаления",
+      "deleteDescription": "Это действие навсегда удалит статью из базы знаний. Вы уверены, что хотите продолжить?",
+      "deleteButton": "Удалить",
+      "operationSuccess": "Операция выполнена успешно"
+    },
+    "toolbar": {
+      "searchPlaceholder": "Поиск по базе знаний...",
+      "reset": "Сбросить",
+      "sortModeHint": "Перетаскивайте элементы для сортировки, затем нажмите сохранить",
+      "editSort": "Изменить порядок",
+      "saveSort": "Сохранить порядок"
     }
   }
 };
