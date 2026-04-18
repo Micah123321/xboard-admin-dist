@@ -2092,6 +2092,8 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
     "email": {
       "title": "邮件设置",
       "description": "配置系统邮件服务，用于发送验证码、密码重置、通知等邮件，支持多种SMTP服务商。",
+      "tab_settings": "基本设置",
+      "tab_templates": "模板管理",
       "email_host": {
         "title": "SMTP主机",
         "description": "SMTP服务器地址，例如：smtp.gmail.com"
@@ -2344,6 +2346,43 @@ window.XBOARD_TRANSLATIONS['zh-CN'] = {
         "title": "Surfboard 配置模版",
         "description": "配额 Surfboard 订阅模版"
       }
+    },
+    "email_template": {
+      "title": "邮件模板",
+      "description": "自定义系统发送的各类邮件内容模板",
+      "customized": "已自定义",
+      "subject": "邮件主题",
+      "subject_placeholder": "输入邮件主题，支持 {{name}} 等占位符",
+      "content": "模板内容 (HTML)",
+      "preview": "实时预览",
+      "override_hint": "修改并保存后将覆盖系统默认模板。点击「恢复默认」可随时还原为当前主题的默认模板。",
+      "placeholders": "可用占位符",
+      "var_name": "变量",
+      "var_desc": "说明",
+      "var_sample": "示例值",
+      "required": "必填",
+      "insert": "插入",
+      "placeholder_hint": "* 标记为必须包含的占位符，点击可插入到内容末尾",
+      "click_to_insert": "点击插入",
+      "save": "保存",
+      "save_success": "模板保存成功",
+      "save_before_test": "请先保存修改后再发送测试",
+      "send_test": "发送测试",
+      "test_dialog_title": "发送测试邮件",
+      "test_dialog_description": "输入收件邮箱，留空将发送到当前管理员邮箱",
+      "test_email_placeholder": "收件邮箱（留空使用当前账号）",
+      "sending": "发送中...",
+      "test_success": "测试邮件已发送",
+      "reset": "恢复默认",
+      "reset_title": "恢复默认模板",
+      "reset_description": "确定要恢复此模板为默认内容吗？自定义的内容将被删除。",
+      "reset_confirm": "确定恢复",
+      "reset_success": "已恢复默认模板",
+      "unsaved": "有未保存的修改",
+      "discard_title": "未保存的修改",
+      "discard_description": "当前模板有未保存的修改，切换标签页将丢失这些修改。",
+      "discard_confirm": "丢弃修改",
+      "cancel": "取消"
     }
   },
   "sidebar": {

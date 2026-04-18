@@ -2173,6 +2173,8 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
     "email": {
       "title": "Email Settings",
       "description": "Configure system email service for sending verification codes, password resets, and notifications, supporting various SMTP providers.",
+      "tab_settings": "Settings",
+      "tab_templates": "Templates",
       "email_host": {
         "title": "SMTP Host",
         "description": "SMTP server address, e.g., smtp.gmail.com"
@@ -2330,6 +2332,43 @@ window.XBOARD_TRANSLATIONS['en-US'] = {
         "title": "Surfboard Template",
         "description": "Configure subscription template format for Surfboard"
       }
+    },
+    "email_template": {
+      "title": "Email Templates",
+      "description": "Customize the content of system email templates",
+      "customized": "Customized",
+      "subject": "Subject",
+      "subject_placeholder": "Enter email subject, supports {{name}} placeholders",
+      "content": "Template Content (HTML)",
+      "preview": "Live Preview",
+      "override_hint": "Saving will override the default system template. Click \"Reset to Default\" to restore the theme's default template at any time.",
+      "placeholders": "Available Placeholders",
+      "var_name": "Variable",
+      "var_desc": "Description",
+      "var_sample": "Sample Value",
+      "required": "Required",
+      "insert": "Insert",
+      "placeholder_hint": "* marks required placeholders. Click to insert at the end of the content.",
+      "click_to_insert": "Click to insert",
+      "save": "Save",
+      "save_success": "Template saved successfully",
+      "save_before_test": "Please save changes before sending a test email",
+      "send_test": "Send Test",
+      "test_dialog_title": "Send Test Email",
+      "test_dialog_description": "Enter recipient email address. Leave empty to send to your admin email.",
+      "test_email_placeholder": "Recipient email (leave empty for current account)",
+      "sending": "Sending...",
+      "test_success": "Test email sent successfully",
+      "reset": "Reset to Default",
+      "reset_title": "Reset Template",
+      "reset_description": "Are you sure you want to reset this template to default? Your customizations will be deleted.",
+      "reset_confirm": "Confirm Reset",
+      "reset_success": "Template reset to default",
+      "unsaved": "Unsaved changes",
+      "discard_title": "Unsaved Changes",
+      "discard_description": "This template has unsaved changes. Switching tabs will discard them.",
+      "discard_confirm": "Discard",
+      "cancel": "Cancel"
     }
   },
   "sidebar": {
